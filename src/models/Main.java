@@ -13,10 +13,13 @@ public class Main extends javax.swing.JFrame {
     static Login login = new Login();
     static Lista Clientes = new Lista();
     static Lista Usuarios = new Lista();
+    static Lista Emprendedores = new Lista();
     
     public static Lista GetListaClientes(){
         return Clientes;
     }
+    
+    
     
     public static Lista GetListaUsuarios(){
         return Usuarios;
