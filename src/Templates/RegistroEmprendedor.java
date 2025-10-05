@@ -28,6 +28,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         panelRound1 = new RoundersComponents.PanelRound();
+        jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -41,15 +42,23 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         panelRound1.setRoundTopLeft(50);
         panelRound1.setRoundTopRight(50);
 
+        jLabel1.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/EmprededorProfileBIG.png"))); // NOI18N
+
         javax.swing.GroupLayout panelRound1Layout = new javax.swing.GroupLayout(panelRound1);
         panelRound1.setLayout(panelRound1Layout);
         panelRound1Layout.setHorizontalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 790, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound1Layout.createSequentialGroup()
+                .addContainerGap(450, Short.MAX_VALUE)
+                .addComponent(jLabel1)
+                .addGap(130, 130, 130))
         );
         panelRound1Layout.setVerticalGroup(
             panelRound1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 720, Short.MAX_VALUE)
+            .addGroup(panelRound1Layout.createSequentialGroup()
+                .addGap(78, 78, 78)
+                .addComponent(jLabel1)
+                .addContainerGap(432, Short.MAX_VALUE))
         );
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 190, 790, 720));
@@ -71,6 +80,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel jLabel1;
     private javax.swing.JPanel jPanel1;
     private RoundersComponents.PanelRound panelRound1;
     // End of variables declaration//GEN-END:variables
