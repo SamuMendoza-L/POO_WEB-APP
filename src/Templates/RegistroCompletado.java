@@ -21,6 +21,18 @@ public class RegistroCompletado extends javax.swing.JFrame {
         
         LabelNombreCliente.setText(nombre + ",");
         setLocationRelativeTo(null);
+        
+        setSize(520, 320);               // Tamaño fijo
+        setResizable(false);             // No permitir cambiar tamaño
+        setAlwaysOnTop(true);            // Siempre encima de otras ventanas
+        setLocationRelativeTo(null);     // Centrar en pantalla
+        
+        //Para no cerrar todas las pestañas, solo esta
+        setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+
+        
+        
+
     }
 
     /**
