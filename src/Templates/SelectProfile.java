@@ -22,7 +22,6 @@ public class SelectProfile extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
-        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setBackground(new java.awt.Color(18, 65, 112));
         jPanel1.setPreferredSize(new java.awt.Dimension(1920, 1080));
@@ -47,6 +46,11 @@ public class SelectProfile extends javax.swing.JFrame {
         buttonRound1.setRoundBottomRight(30);
         buttonRound1.setRoundTopLeft(30);
         buttonRound1.setRoundTopRight(30);
+        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound1ActionPerformed(evt);
+            }
+        });
         panelRound8.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(20, 260, 230, 45));
 
         jLabel3.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
@@ -108,6 +112,12 @@ public class SelectProfile extends javax.swing.JFrame {
         this.dispose();
     }//GEN-LAST:event_buttonRound2ActionPerformed
 
+    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
+        // TODO add your handling code here:
+        new RegistroEmprendedor().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonRound1ActionPerformed
+
     
     
 
@@ -120,7 +130,6 @@ public class SelectProfile extends javax.swing.JFrame {
     private javax.swing.JPanel jPanel1;
     private RoundersComponents.PanelRound panelRound1;
     private RoundersComponents.PanelRound panelRound10;
-    private RoundersComponents.PanelRound panelRound5;
     private RoundersComponents.PanelRound panelRound8;
     // End of variables declaration//GEN-END:variables
 }
