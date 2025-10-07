@@ -4,6 +4,10 @@
  */
 package Templates;
 
+import javax.swing.JOptionPane;
+import models.Usuario;
+import models.Emprendedor;
+
 /**
  *
  * @author samuelmendoza
@@ -49,6 +53,8 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         btnMostrarPass = new javax.swing.JCheckBox();
         CbxTipoNegocio = new javax.swing.JComboBox<>();
         buttonRound1 = new RoundersComponents.ButtonRound();
+        jLabel11 = new javax.swing.JLabel();
+        txtCarreraEmprendedor = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -107,31 +113,31 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
 
         jLabel6.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel6.setText("Apellido");
-        panelRound2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 120, -1, -1));
+        panelRound2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 90, -1, -1));
 
         jLabel7.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel7.setText("Correo");
-        panelRound2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 210, -1, -1));
+        panelRound2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 180, -1, -1));
 
         jLabel8.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel8.setText("Teléfono");
-        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 300, -1, -1));
+        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 270, -1, -1));
 
         jSeparator1.setOrientation(javax.swing.SwingConstants.VERTICAL);
-        panelRound2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 10, 490));
+        panelRound2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 10, 10, 530));
 
         jLabel9.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel9.setText("Nombre");
-        panelRound2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 30, -1, -1));
+        panelRound2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 0, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel10.setText("Nombre de Negocio");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
         panelRound2.add(txtNombreNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 280, 40));
-        panelRound2.add(txtNombreEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 280, 40));
-        panelRound2.add(txtApellidoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 40));
-        panelRound2.add(txtCorreoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 280, 40));
-        panelRound2.add(txtTeléfonoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 280, 40));
+        panelRound2.add(txtNombreEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 50, 280, 40));
+        panelRound2.add(txtApellidoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 140, 280, 40));
+        panelRound2.add(txtCorreoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 220, 280, 40));
+        panelRound2.add(txtTeléfonoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 310, 280, 40));
         panelRound2.add(txtEmprendedorPss, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 280, 40));
 
         btnMostrarPass.setText("Mostrar");
@@ -153,15 +159,25 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         buttonRound1.setRoundBottomRight(50);
         buttonRound1.setRoundTopLeft(50);
         buttonRound1.setRoundTopRight(50);
-        panelRound2.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 280, 50));
+        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound1ActionPerformed(evt);
+            }
+        });
+        panelRound2.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 480, 280, 50));
 
-        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 740, 510));
+        jLabel11.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
+        jLabel11.setText("Carrera");
+        panelRound2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 360, -1, -1));
+        panelRound2.add(txtCarreraEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 400, 280, 40));
+
+        panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 740, 560));
 
         jLabel2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
         jLabel2.setText("TU INFORMACIÓN");
         panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, -1, 70));
 
-        jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 170, 790, 740));
+        jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 140, 790, 780));
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -188,6 +204,29 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_btnMostrarPassActionPerformed
 
+    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
+        // TODO add your handling code here:
+        String Nombre = txtNombreEmprendedor.getText();
+        String Apellido = txtApellidoEmprendedor.getText();
+        String Tel = txtTeléfonoEmprendedor.getText();
+        String Correo = txtCorreoEmprendedor.getText();
+        String Contraseña = txtEmprendedorPss.getText();
+        String NombreNegocio = txtNombreNegocio.getText();
+        String Carrera = txtCarreraEmprendedor.getText();
+        String TipoN = (String) CbxTipoNegocio.getSelectedItem();
+        
+        Emprendedor u = new Emprendedor(Nombre, Apellido, Tel,Correo, Contraseña, Carrera, NombreNegocio, TipoN);
+        models.Main.GetListaUsuarios().AdicionarFinal(u);
+        
+        JOptionPane.showInputDialog(u.toString());
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_buttonRound1ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -196,6 +235,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
     private RoundersComponents.ButtonRound buttonRound1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -210,6 +250,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;
     private javax.swing.JTextField txtApellidoEmprendedor;
+    private javax.swing.JTextField txtCarreraEmprendedor;
     private javax.swing.JTextField txtCorreoEmprendedor;
     private javax.swing.JPasswordField txtEmprendedorPss;
     private javax.swing.JTextField txtNombreEmprendedor;

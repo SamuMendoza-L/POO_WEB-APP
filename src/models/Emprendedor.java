@@ -39,6 +39,13 @@ public class Emprendedor extends Usuario{
     public void setTipoNegocio(String TipoNegocio) {
         this.TipoNegocio = TipoNegocio;
     }
+
+    @Override
+    public String toString() {
+        return super.toString() + "Emprendedor{" + "Carrera=" + Carrera + ", NombreNegocio=" + NombreNegocio + ", TipoNegocio=" + TipoNegocio + '}';
+    }
+    
+    
     
     
     
