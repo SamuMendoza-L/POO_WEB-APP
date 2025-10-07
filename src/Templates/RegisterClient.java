@@ -199,7 +199,7 @@ public class RegisterClient extends javax.swing.JFrame {
             txtContraseñaCliente.setEchoChar((char) 0);
         } else {
             // Ocultar contraseña con *
-            txtContraseñaCliente.setEchoChar('*');
+            txtContraseñaCliente.setEchoChar('·');
         }
             
     }//GEN-LAST:event_btnMostrarPssActionPerformed
