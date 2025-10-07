@@ -40,14 +40,15 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        txtNombreNegocio = new javax.swing.JTextField();
+        txtNombreEmprendedor = new javax.swing.JTextField();
+        txtApellidoEmprendedor = new javax.swing.JTextField();
+        txtCorreoEmprendedor = new javax.swing.JTextField();
+        txtTeléfonoEmprendedor = new javax.swing.JTextField();
         txtEmprendedorPss = new javax.swing.JPasswordField();
         btnMostrarPass = new javax.swing.JCheckBox();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        CbxTipoNegocio = new javax.swing.JComboBox<>();
+        buttonRound1 = new RoundersComponents.ButtonRound();
         jLabel2 = new javax.swing.JLabel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -126,11 +127,11 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         jLabel10.setFont(new java.awt.Font("Noto Nastaliq Urdu", 1, 18)); // NOI18N
         jLabel10.setText("Nombre de Negocio");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 100, -1, -1));
-        panelRound2.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 280, 40));
-        panelRound2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 280, 40));
-        panelRound2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 40));
-        panelRound2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 280, 40));
-        panelRound2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 280, 40));
+        panelRound2.add(txtNombreNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 150, 280, 40));
+        panelRound2.add(txtNombreEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 80, 280, 40));
+        panelRound2.add(txtApellidoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 170, 280, 40));
+        panelRound2.add(txtCorreoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 250, 280, 40));
+        panelRound2.add(txtTeléfonoEmprendedor, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 340, 280, 40));
         panelRound2.add(txtEmprendedorPss, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 370, 280, 40));
 
         btnMostrarPass.setText("Mostrar");
@@ -141,8 +142,18 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         });
         panelRound2.add(btnMostrarPass, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 420, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Moda y Belleza", "Gastronomía", "Tecnología", "Arte y Diseño", "Educación", "Servicios Profesionales", "Salud y Bienestar", "Entretenimiento", "Sostenible / Ecológico", "Otro" }));
-        panelRound2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 280, 40));
+        CbxTipoNegocio.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Moda y Belleza", "Gastronomía", "Tecnología", "Arte y Diseño", "Educación", "Servicios Profesionales", "Salud y Bienestar", "Entretenimiento", "Sostenible / Ecológico", "Otro" }));
+        panelRound2.add(CbxTipoNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(400, 270, 280, 40));
+
+        buttonRound1.setBackground(new java.awt.Color(38, 102, 127));
+        buttonRound1.setBorder(new javax.swing.border.SoftBevelBorder(javax.swing.border.BevelBorder.RAISED));
+        buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound1.setText("REGISTRAR");
+        buttonRound1.setRoundBottomLeft(50);
+        buttonRound1.setRoundBottomRight(50);
+        buttonRound1.setRoundTopLeft(50);
+        buttonRound1.setRoundTopRight(50);
+        panelRound2.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(40, 420, 280, 50));
 
         panelRound1.add(panelRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, 740, 510));
 
@@ -180,8 +191,9 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JComboBox<String> CbxTipoNegocio;
     private javax.swing.JCheckBox btnMostrarPass;
-    private javax.swing.JComboBox<String> jComboBox1;
+    private RoundersComponents.ButtonRound buttonRound1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;
@@ -194,14 +206,14 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
     private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JSeparator jSeparator1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private RoundersComponents.PanelRound panelRound1;
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;
+    private javax.swing.JTextField txtApellidoEmprendedor;
+    private javax.swing.JTextField txtCorreoEmprendedor;
     private javax.swing.JPasswordField txtEmprendedorPss;
+    private javax.swing.JTextField txtNombreEmprendedor;
+    private javax.swing.JTextField txtNombreNegocio;
+    private javax.swing.JTextField txtTeléfonoEmprendedor;
     // End of variables declaration//GEN-END:variables
 }
