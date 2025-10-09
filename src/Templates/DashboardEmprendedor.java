@@ -4,6 +4,8 @@
  */
 package Templates;
 
+import java.awt.BorderLayout;
+
 /**
  *
  * @author samuelmendoza
@@ -15,6 +17,10 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
      */
     public DashboardEmprendedor() {
         initComponents();
+        
+        PanelContenedor.setLayout(new BorderLayout());
+        
+        
     }
 
     /**
@@ -28,13 +34,18 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         menu = new javax.swing.JPanel();
+        buttonRound1 = new RoundersComponents.ButtonRound();
+        buttonRound2 = new RoundersComponents.ButtonRound();
+        buttonRound3 = new RoundersComponents.ButtonRound();
         panelRound1 = new RoundersComponents.PanelRound();
         panelRound2 = new RoundersComponents.PanelRound();
         jLabel1 = new javax.swing.JLabel();
         panelRound3 = new RoundersComponents.PanelRound();
         NombreInicioSesion = new javax.swing.JLabel();
+        PanelContenedor = new RoundersComponents.PanelRound();
         panelRound4 = new RoundersComponents.PanelRound();
-        jLabel2 = new javax.swing.JLabel();
+        panelRound9 = new RoundersComponents.PanelRound();
+        panelRound10 = new RoundersComponents.PanelRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -44,6 +55,21 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         menu.setBackground(new java.awt.Color(18, 65, 112));
         menu.setPreferredSize(new java.awt.Dimension(240, 930));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        buttonRound1.setText("PRODUCTOS");
+        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+
+        buttonRound2.setText("PEDIDOS");
+        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound2ActionPerformed(evt);
+            }
+        });
+        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+
+        buttonRound3.setText("FINANZAS");
+        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+
         jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
 
         panelRound1.setBackground(new java.awt.Color(255, 255, 255));
@@ -84,38 +110,71 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
             panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound3Layout.createSequentialGroup()
                 .addContainerGap()
-                .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
                 .addContainerGap())
         );
 
-        panelRound2.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 20, 330, 60));
+        panelRound2.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 330, 70));
 
-        panelRound4.setPreferredSize(new java.awt.Dimension(100, 100));
-        panelRound4.setRoundBottomLeft(150);
-        panelRound4.setRoundBottomRight(150);
-        panelRound4.setRoundTopLeft(150);
-        panelRound4.setRoundTopRight(150);
+        panelRound1.add(panelRound2, java.awt.BorderLayout.PAGE_START);
 
-        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/IconNotificaciones.png"))); // NOI18N
+        PanelContenedor.setBackground(new java.awt.Color(255, 255, 255));
+        PanelContenedor.setRoundBottomLeft(150);
+
+        panelRound4.setRoundBottomLeft(50);
+        panelRound4.setRoundBottomRight(50);
+        panelRound4.setRoundTopLeft(50);
+        panelRound4.setRoundTopRight(50);
 
         javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
         panelRound4.setLayout(panelRound4Layout);
         panelRound4Layout.setHorizontalGroup(
             panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound4Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
         panelRound4Layout.setVerticalGroup(
             panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound4Layout.createSequentialGroup()
-                .addComponent(jLabel2)
-                .addGap(0, 0, Short.MAX_VALUE))
+            .addGap(0, 0, Short.MAX_VALUE)
         );
 
-        panelRound2.add(panelRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 0, 100, 100));
+        javax.swing.GroupLayout panelRound9Layout = new javax.swing.GroupLayout(panelRound9);
+        panelRound9.setLayout(panelRound9Layout);
+        panelRound9Layout.setHorizontalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panelRound9Layout.setVerticalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
 
-        panelRound1.add(panelRound2, java.awt.BorderLayout.PAGE_START);
+        javax.swing.GroupLayout panelRound10Layout = new javax.swing.GroupLayout(panelRound10);
+        panelRound10.setLayout(panelRound10Layout);
+        panelRound10Layout.setHorizontalGroup(
+            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+        panelRound10Layout.setVerticalGroup(
+            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 0, Short.MAX_VALUE)
+        );
+
+        javax.swing.GroupLayout PanelContenedorLayout = new javax.swing.GroupLayout(PanelContenedor);
+        PanelContenedor.setLayout(PanelContenedorLayout);
+        PanelContenedorLayout.setHorizontalGroup(
+            PanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelRound4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelRound10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelRound9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+        PanelContenedorLayout.setVerticalGroup(
+            PanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(panelRound4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelRound10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addComponent(panelRound9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+        );
+
+        panelRound1.add(PanelContenedor, java.awt.BorderLayout.CENTER);
 
         jPanel1.add(panelRound1, java.awt.BorderLayout.CENTER);
 
@@ -127,11 +186,23 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
 
         pack();
     }// </editor-fold>//GEN-END:initComponents
+
+    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+        // TODO add your handling code here:
+        PedidosEmprendedor Pe = new PedidosEmprendedor();
+        Pe.setSize(1630, 924);
+        Pe.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(Pe, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+    }//GEN-LAST:event_buttonRound2ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -170,13 +241,18 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel NombreInicioSesion;
+    private RoundersComponents.PanelRound PanelContenedor;
+    private RoundersComponents.ButtonRound buttonRound1;
+    private RoundersComponents.ButtonRound buttonRound2;
+    private RoundersComponents.ButtonRound buttonRound3;
     private javax.swing.JLabel jLabel1;
-    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
     private RoundersComponents.PanelRound panelRound1;
+    private RoundersComponents.PanelRound panelRound10;
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;
     private RoundersComponents.PanelRound panelRound4;
+    private RoundersComponents.PanelRound panelRound9;
     // End of variables declaration//GEN-END:variables
 }
