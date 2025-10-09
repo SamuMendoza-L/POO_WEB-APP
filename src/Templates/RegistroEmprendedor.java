@@ -217,13 +217,8 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         
         Emprendedor u = new Emprendedor(Nombre, Apellido, Tel,Correo, Contraseña, Carrera, NombreNegocio, TipoN);
         models.Main.GetListaUsuarios().AdicionarFinal(u);
-        
-        JOptionPane.showInputDialog(u.toString());
-        
-        
-        
-        
-        
+        RegistroCompletado frameB = new RegistroCompletado(Nombre);
+        frameB.setVisible(true);
         
     }//GEN-LAST:event_buttonRound1ActionPerformed
 

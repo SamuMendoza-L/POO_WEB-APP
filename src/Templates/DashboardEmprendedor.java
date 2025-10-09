@@ -26,17 +26,108 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        jPanel1 = new javax.swing.JPanel();
+        menu = new javax.swing.JPanel();
+        panelRound1 = new RoundersComponents.PanelRound();
+        panelRound2 = new RoundersComponents.PanelRound();
+        jLabel1 = new javax.swing.JLabel();
+        panelRound3 = new RoundersComponents.PanelRound();
+        NombreInicioSesion = new javax.swing.JLabel();
+        panelRound4 = new RoundersComponents.PanelRound();
+        jLabel2 = new javax.swing.JLabel();
+
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+
+        jPanel1.setBackground(new java.awt.Color(18, 65, 112));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        menu.setBackground(new java.awt.Color(18, 65, 112));
+        menu.setPreferredSize(new java.awt.Dimension(240, 930));
+        menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+        jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
+
+        panelRound1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound1.setRoundBottomLeft(150);
+        panelRound1.setRoundTopLeft(150);
+        panelRound1.setLayout(new java.awt.BorderLayout());
+
+        panelRound2.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound2.setMinimumSize(new java.awt.Dimension(1630, 100));
+        panelRound2.setRoundTopLeft(150);
+        panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 55)); // NOI18N
+        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel1.setText("Dashboard");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
+        jLabel1.setPreferredSize(new java.awt.Dimension(200, 95));
+        panelRound2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 36, 385, 70));
+
+        panelRound3.setBackground(new java.awt.Color(221, 244, 231));
+        panelRound3.setRoundBottomLeft(80);
+        panelRound3.setRoundBottomRight(80);
+        panelRound3.setRoundTopLeft(80);
+        panelRound3.setRoundTopRight(80);
+
+        NombreInicioSesion.setBackground(new java.awt.Color(221, 244, 231));
+        NombreInicioSesion.setFont(new java.awt.Font("Noto Sans Kannada", 2, 18)); // NOI18N
+        NombreInicioSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        NombreInicioSesion.setText("jLabel2");
+
+        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
+        panelRound3.setLayout(panelRound3Layout);
+        panelRound3Layout.setHorizontalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
+        );
+        panelRound3Layout.setVerticalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound3Layout.createSequentialGroup()
+                .addContainerGap()
+                .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 48, Short.MAX_VALUE)
+                .addContainerGap())
+        );
+
+        panelRound2.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1280, 20, 330, 60));
+
+        panelRound4.setPreferredSize(new java.awt.Dimension(100, 100));
+        panelRound4.setRoundBottomLeft(150);
+        panelRound4.setRoundBottomRight(150);
+        panelRound4.setRoundTopLeft(150);
+        panelRound4.setRoundTopRight(150);
+
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/IconNotificaciones.png"))); // NOI18N
+
+        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
+        panelRound4.setLayout(panelRound4Layout);
+        panelRound4Layout.setHorizontalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound4Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+        panelRound4Layout.setVerticalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound4Layout.createSequentialGroup()
+                .addComponent(jLabel2)
+                .addGap(0, 0, Short.MAX_VALUE))
+        );
+
+        panelRound2.add(panelRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(1170, 0, 100, 100));
+
+        panelRound1.add(panelRound2, java.awt.BorderLayout.PAGE_START);
+
+        jPanel1.add(panelRound1, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 400, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         layout.setVerticalGroup(
             layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 300, Short.MAX_VALUE)
+            .addComponent(jPanel1, javax.swing.GroupLayout.DEFAULT_SIZE, 1030, Short.MAX_VALUE)
         );
 
         pack();
@@ -78,5 +169,14 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private javax.swing.JLabel NombreInicioSesion;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel menu;
+    private RoundersComponents.PanelRound panelRound1;
+    private RoundersComponents.PanelRound panelRound2;
+    private RoundersComponents.PanelRound panelRound3;
+    private RoundersComponents.PanelRound panelRound4;
     // End of variables declaration//GEN-END:variables
 }

@@ -3,6 +3,8 @@
  * Click nbfs://nbhost/SystemFileSystem/Templates/GUIForms/JFrame.java to edit this template
  */
 package Templates;
+import java.awt.*;
+import javax.swing.*;
 import models.Main;
 
 
@@ -27,11 +29,13 @@ public class RegistroCompletado extends javax.swing.JFrame {
         setAlwaysOnTop(true);            // Siempre encima de otras ventanas
         setLocationRelativeTo(null);     // Centrar en pantalla
         
+        // ⏰ Cerrar automáticamente después de 3 segundos (3000 ms)
+        Timer timer = new Timer(3000, e -> dispose());
+        timer.setRepeats(false); // solo una vez
+        timer.start();
+        
         //Para no cerrar todas las pestañas, solo esta
         setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
-
-        
-        
 
     }
 
