@@ -57,6 +57,11 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
         buttonRound1.setText("PRODUCTOS");
+        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound1ActionPerformed(evt);
+            }
+        });
         menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
 
         buttonRound2.setText("PEDIDOS");
@@ -203,6 +208,18 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         PanelContenedor.revalidate();
         PanelContenedor.repaint();
     }//GEN-LAST:event_buttonRound2ActionPerformed
+
+    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
+        // TODO add your handling code here:
+        ProductosEmprendedor ProE = new ProductosEmprendedor();
+        ProE.setSize(1630, 924);
+        ProE.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(ProE, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+    }//GEN-LAST:event_buttonRound1ActionPerformed
 
     /**
      * @param args the command line arguments

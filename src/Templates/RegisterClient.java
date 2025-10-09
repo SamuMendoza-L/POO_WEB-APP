@@ -50,6 +50,7 @@ public class RegisterClient extends javax.swing.JFrame {
         jLabel10 = new javax.swing.JLabel();
         txtTelefonoCliente = new javax.swing.JTextField();
         jLabel7 = new javax.swing.JLabel();
+        buttonRound2 = new RoundersComponents.ButtonRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -153,6 +154,22 @@ public class RegisterClient extends javax.swing.JFrame {
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 190, 790, 720));
 
+        buttonRound2.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound2.setBorder(null);
+        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound2.setText("Pagina de inicio");
+        buttonRound2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound2.setRoundBottomLeft(30);
+        buttonRound2.setRoundBottomRight(30);
+        buttonRound2.setRoundTopLeft(30);
+        buttonRound2.setRoundTopRight(30);
+        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 60, 220, 30));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -184,12 +201,6 @@ public class RegisterClient extends javax.swing.JFrame {
         RegistroCompletado frameB = new RegistroCompletado(nombre);
         frameB.setVisible(true);
         
-        
-        
-        
-        
-        
-        
     }//GEN-LAST:event_buttonRound1ActionPerformed
 
     private void btnMostrarPssActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMostrarPssActionPerformed
@@ -204,11 +215,18 @@ public class RegisterClient extends javax.swing.JFrame {
             
     }//GEN-LAST:event_btnMostrarPssActionPerformed
 
+    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+        // TODO add your handling code here:
+        new Login().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonRound2ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JCheckBox btnMostrarPss;
     private RoundersComponents.ButtonRound buttonRound1;
+    private RoundersComponents.ButtonRound buttonRound2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel2;

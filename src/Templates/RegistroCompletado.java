@@ -52,7 +52,6 @@ public class RegistroCompletado extends javax.swing.JFrame {
         jLabel1 = new javax.swing.JLabel();
         LabelNombreCliente = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
-        buttonRound1 = new RoundersComponents.ButtonRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -79,18 +78,6 @@ public class RegistroCompletado extends javax.swing.JFrame {
         jLabel2.setText("Te haz registrado correctamente");
         panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(250, 180, -1, -1));
 
-        buttonRound1.setText("INICIAR SESIÓN");
-        buttonRound1.setRoundBottomLeft(20);
-        buttonRound1.setRoundBottomRight(20);
-        buttonRound1.setRoundTopLeft(20);
-        buttonRound1.setRoundTopRight(20);
-        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
-            public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound1ActionPerformed(evt);
-            }
-        });
-        panelRound1.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(300, 240, 150, 25));
-
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -110,17 +97,10 @@ public class RegistroCompletado extends javax.swing.JFrame {
         
     }//GEN-LAST:event_LabelNombreClienteComponentAdded
 
-    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
-        // TODO add your handling code here:
-        new Login().setVisible(true);
-        this.dispose();
-    }//GEN-LAST:event_buttonRound1ActionPerformed
-
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JLabel LabelNombreCliente;
-    private RoundersComponents.ButtonRound buttonRound1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private RoundersComponents.PanelRound panelRound1;
