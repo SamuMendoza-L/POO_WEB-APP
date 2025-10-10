@@ -37,15 +37,11 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         buttonRound1 = new RoundersComponents.ButtonRound();
         buttonRound2 = new RoundersComponents.ButtonRound();
         buttonRound3 = new RoundersComponents.ButtonRound();
-        panelRound1 = new RoundersComponents.PanelRound();
-        panelRound2 = new RoundersComponents.PanelRound();
-        jLabel1 = new javax.swing.JLabel();
-        panelRound3 = new RoundersComponents.PanelRound();
-        NombreInicioSesion = new javax.swing.JLabel();
-        PanelContenedor = new RoundersComponents.PanelRound();
-        panelRound4 = new RoundersComponents.PanelRound();
-        panelRound9 = new RoundersComponents.PanelRound();
-        panelRound10 = new RoundersComponents.PanelRound();
+        buttonRound4 = new RoundersComponents.ButtonRound();
+        buttonRound5 = new RoundersComponents.ButtonRound();
+        buttonRound6 = new RoundersComponents.ButtonRound();
+        buttonRound7 = new RoundersComponents.ButtonRound();
+        PanelContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -56,132 +52,95 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         menu.setPreferredSize(new java.awt.Dimension(240, 930));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonRound1.setText("PRODUCTOS");
+        buttonRound1.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound1.setText("Dashboard");
+        buttonRound1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        buttonRound1.setPreferredSize(new java.awt.Dimension(240, 23));
         buttonRound1.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRound1ActionPerformed(evt);
             }
         });
-        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 140, -1, -1));
+        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 200, 40));
 
-        buttonRound2.setText("PEDIDOS");
+        buttonRound2.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound2.setText("Pedidos");
+        buttonRound2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         buttonRound2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRound2ActionPerformed(evt);
             }
         });
-        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 190, -1, -1));
+        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 200, 40));
 
-        buttonRound3.setText("FINANZAS");
-        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 230, -1, -1));
+        buttonRound3.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound3.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound3.setText("Finanzas");
+        buttonRound3.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 200, 40));
+
+        buttonRound4.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound4.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound4.setText("Perfil");
+        buttonRound4.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        menu.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 200, 40));
+
+        buttonRound5.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound5.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound5.setText("Cerrar Sesión");
+        buttonRound5.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        buttonRound5.setVerifyInputWhenFocusTarget(false);
+        menu.add(buttonRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 870, 240, 40));
+
+        buttonRound6.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound6.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound6.setText("Productos");
+        buttonRound6.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        buttonRound6.setPreferredSize(new java.awt.Dimension(240, 23));
+        buttonRound6.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound6ActionPerformed(evt);
+            }
+        });
+        menu.add(buttonRound6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 200, 40));
+
+        buttonRound7.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound7.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound7.setText("Metricas");
+        buttonRound7.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        menu.add(buttonRound7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 200, 40));
 
         jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
 
-        panelRound1.setBackground(new java.awt.Color(255, 255, 255));
-        panelRound1.setRoundBottomLeft(150);
-        panelRound1.setRoundTopLeft(150);
-        panelRound1.setLayout(new java.awt.BorderLayout());
-
-        panelRound2.setBackground(new java.awt.Color(255, 255, 255));
-        panelRound2.setMinimumSize(new java.awt.Dimension(1630, 100));
-        panelRound2.setRoundTopLeft(150);
-        panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 55)); // NOI18N
-        jLabel1.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel1.setText("Dashboard");
-        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.TOP);
-        jLabel1.setPreferredSize(new java.awt.Dimension(200, 95));
-        panelRound2.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 36, 385, 70));
-
-        panelRound3.setBackground(new java.awt.Color(221, 244, 231));
-        panelRound3.setRoundBottomLeft(80);
-        panelRound3.setRoundBottomRight(80);
-        panelRound3.setRoundTopLeft(80);
-        panelRound3.setRoundTopRight(80);
-
-        NombreInicioSesion.setBackground(new java.awt.Color(221, 244, 231));
-        NombreInicioSesion.setFont(new java.awt.Font("Noto Sans Kannada", 2, 18)); // NOI18N
-        NombreInicioSesion.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        NombreInicioSesion.setText("jLabel2");
-
-        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
-        panelRound3.setLayout(panelRound3Layout);
-        panelRound3Layout.setHorizontalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 330, Short.MAX_VALUE)
-        );
-        panelRound3Layout.setVerticalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound3Layout.createSequentialGroup()
-                .addContainerGap()
-                .addComponent(NombreInicioSesion, javax.swing.GroupLayout.DEFAULT_SIZE, 58, Short.MAX_VALUE)
-                .addContainerGap())
-        );
-
-        panelRound2.add(panelRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1030, 20, 330, 70));
-
-        panelRound1.add(panelRound2, java.awt.BorderLayout.PAGE_START);
-
         PanelContenedor.setBackground(new java.awt.Color(255, 255, 255));
-        PanelContenedor.setRoundBottomLeft(150);
-
-        panelRound4.setRoundBottomLeft(50);
-        panelRound4.setRoundBottomRight(50);
-        panelRound4.setRoundTopLeft(50);
-        panelRound4.setRoundTopRight(50);
-
-        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
-        panelRound4.setLayout(panelRound4Layout);
-        panelRound4Layout.setHorizontalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        panelRound4Layout.setVerticalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelRound9Layout = new javax.swing.GroupLayout(panelRound9);
-        panelRound9.setLayout(panelRound9Layout);
-        panelRound9Layout.setHorizontalGroup(
-            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        panelRound9Layout.setVerticalGroup(
-            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-
-        javax.swing.GroupLayout panelRound10Layout = new javax.swing.GroupLayout(panelRound10);
-        panelRound10.setLayout(panelRound10Layout);
-        panelRound10Layout.setHorizontalGroup(
-            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
-        panelRound10Layout.setVerticalGroup(
-            panelRound10Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 0, Short.MAX_VALUE)
-        );
 
         javax.swing.GroupLayout PanelContenedorLayout = new javax.swing.GroupLayout(PanelContenedor);
         PanelContenedor.setLayout(PanelContenedorLayout);
         PanelContenedorLayout.setHorizontalGroup(
             PanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelRound10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelRound9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 1549, Short.MAX_VALUE)
         );
         PanelContenedorLayout.setVerticalGroup(
             PanelContenedorLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(panelRound4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelRound10, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-            .addComponent(panelRound9, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+            .addGap(0, 930, Short.MAX_VALUE)
         );
 
-        panelRound1.add(PanelContenedor, java.awt.BorderLayout.CENTER);
-
-        jPanel1.add(panelRound1, java.awt.BorderLayout.CENTER);
+        jPanel1.add(PanelContenedor, java.awt.BorderLayout.CENTER);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
@@ -200,7 +159,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
         // TODO add your handling code here:
         PedidosEmprendedor Pe = new PedidosEmprendedor();
-        Pe.setSize(1630, 924);
+        Pe.setSize(1549, 930);
         Pe.setLocation(0, 0);
         
         PanelContenedor.removeAll();
@@ -212,7 +171,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
         // TODO add your handling code here:
         ProductosEmprendedor ProE = new ProductosEmprendedor();
-        ProE.setSize(1630, 924);
+        ProE.setSize(1549, 930);
         ProE.setLocation(0, 0);
         
         PanelContenedor.removeAll();
@@ -220,6 +179,10 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         PanelContenedor.revalidate();
         PanelContenedor.repaint();
     }//GEN-LAST:event_buttonRound1ActionPerformed
+
+    private void buttonRound6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound6ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRound6ActionPerformed
 
     /**
      * @param args the command line arguments
@@ -257,19 +220,15 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private javax.swing.JLabel NombreInicioSesion;
-    private RoundersComponents.PanelRound PanelContenedor;
+    private javax.swing.JPanel PanelContenedor;
     private RoundersComponents.ButtonRound buttonRound1;
     private RoundersComponents.ButtonRound buttonRound2;
     private RoundersComponents.ButtonRound buttonRound3;
-    private javax.swing.JLabel jLabel1;
+    private RoundersComponents.ButtonRound buttonRound4;
+    private RoundersComponents.ButtonRound buttonRound5;
+    private RoundersComponents.ButtonRound buttonRound6;
+    private RoundersComponents.ButtonRound buttonRound7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
-    private RoundersComponents.PanelRound panelRound1;
-    private RoundersComponents.PanelRound panelRound10;
-    private RoundersComponents.PanelRound panelRound2;
-    private RoundersComponents.PanelRound panelRound3;
-    private RoundersComponents.PanelRound panelRound4;
-    private RoundersComponents.PanelRound panelRound9;
     // End of variables declaration//GEN-END:variables
 }
