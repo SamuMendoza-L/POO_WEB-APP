@@ -56,6 +56,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         jLabel11 = new javax.swing.JLabel();
         txtCarreraEmprendedor = new javax.swing.JTextField();
         jLabel2 = new javax.swing.JLabel();
+        buttonRound2 = new RoundersComponents.ButtonRound();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
 
@@ -179,6 +180,18 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
 
         jPanel1.add(panelRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(565, 140, 790, 780));
 
+        buttonRound2.setBackground(new java.awt.Color(18, 65, 112));
+        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound2.setText("Página de inicio");
+        buttonRound2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound2.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound2ActionPerformed(evt);
+            }
+        });
+        jPanel1.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(100, 80, -1, -1));
+
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
         getContentPane().setLayout(layout);
         layout.setHorizontalGroup(
@@ -222,12 +235,19 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         
     }//GEN-LAST:event_buttonRound1ActionPerformed
 
+    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+        // TODO add your handling code here:
+        new Login().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonRound2ActionPerformed
+
     
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JComboBox<String> CbxTipoNegocio;
     private javax.swing.JCheckBox btnMostrarPass;
     private RoundersComponents.ButtonRound buttonRound1;
+    private RoundersComponents.ButtonRound buttonRound2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
