@@ -152,10 +152,7 @@ public class Login extends javax.swing.JFrame {
         
         boolean encontrado = false;
         
-        Main.GetListaUsuarios().BuscarUsuario(email, Pass);
-        
-        
-        
+        Main.GetListaUsuarios().BuscarUsuario(email, Pass, this);
         
     }//GEN-LAST:event_btnIngresarActionPerformed
 

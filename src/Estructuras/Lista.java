@@ -2,6 +2,7 @@
 package Estructuras;
 import Templates.DashboardEmprendedor;
 import Templates.DashboardCliente;
+import Templates.Login;
 import javax.swing.JOptionPane;
 import models.Usuario;
 import models.Cliente;
@@ -43,16 +44,19 @@ public class Lista {
         }
     }
     
-    public void BuscarUsuario(String email, String Pass){
+    public void BuscarUsuario(String email, String Pass, Login loginFrame){
         Nodo aux = primero;
         while(aux!=null && !((Usuario)aux.getDato()).getEmail().equals(email))
             aux = aux.getEnlace();
         if(aux!=null && ((Usuario)aux.getDato()).getEmail().equals(email) && ((Usuario)aux.getDato()).getPassword().equals(Pass))
             if(((Usuario)aux.getDato()).getRole().equals("Cliente")){
                 new DashboardCliente().setVisible(true);
+                loginFrame.dispose();
+                
             }
             else if(((Usuario)aux.getDato()).getRole().equals("Emprendedor")){
                 new DashboardEmprendedor().setVisible(true);
+                loginFrame.dispose();
             }
         
         else{

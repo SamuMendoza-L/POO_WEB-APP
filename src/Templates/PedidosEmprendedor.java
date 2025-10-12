@@ -4,6 +4,11 @@
  */
 package Templates;
 
+import java.awt.Image;
+import java.awt.Taskbar;
+import java.awt.Toolkit;
+import models.Main;
+
 /**
  *
  * @author samuelmendoza
@@ -16,6 +21,11 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
     public PedidosEmprendedor() {
         initComponents();
     }
+    
+    public static void main(String[] args) {
+        
+        
+    }
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -26,22 +36,797 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
     private void initComponents() {
 
+        panelRound1 = new RoundersComponents.PanelRound();
+        jLabel1 = new javax.swing.JLabel();
+        btnTodosPedidos = new RoundersComponents.ButtonRound();
+        btnPedidosEntregados = new RoundersComponents.ButtonRound();
+        btnPedidosPendientes = new RoundersComponents.ButtonRound();
+        btnPedidosCancelados = new RoundersComponents.ButtonRound();
+        jPanel3 = new javax.swing.JPanel();
+        panelRound2 = new RoundersComponents.PanelRound();
+        jPanel4 = new javax.swing.JPanel();
+        panelRound3 = new RoundersComponents.PanelRound();
+        jPanel5 = new javax.swing.JPanel();
+        panelRound4 = new RoundersComponents.PanelRound();
+        jLabel3 = new javax.swing.JLabel();
+        jPanel1 = new javax.swing.JPanel();
+        jPanel2 = new javax.swing.JPanel();
+        jPanel6 = new javax.swing.JPanel();
+        jPanel7 = new javax.swing.JPanel();
+        jPanel8 = new javax.swing.JPanel();
+        jPanel9 = new javax.swing.JPanel();
+        panelRound5 = new RoundersComponents.PanelRound();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel6 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jPanel10 = new javax.swing.JPanel();
+        jPanel11 = new javax.swing.JPanel();
+        jPanel12 = new javax.swing.JPanel();
+        panelRound6 = new RoundersComponents.PanelRound();
+        jLabel2 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        jLabel15 = new javax.swing.JLabel();
+        jPanel13 = new javax.swing.JPanel();
+        jPanel14 = new javax.swing.JPanel();
+        jPanel15 = new javax.swing.JPanel();
+        panelRound7 = new RoundersComponents.PanelRound();
+        jLabel20 = new javax.swing.JLabel();
+        jLabel17 = new javax.swing.JLabel();
+        jLabel19 = new javax.swing.JLabel();
+        jLabel21 = new javax.swing.JLabel();
+        jLabel16 = new javax.swing.JLabel();
+        jLabel18 = new javax.swing.JLabel();
+        jPanel16 = new javax.swing.JPanel();
+        jPanel17 = new javax.swing.JPanel();
+        jPanel18 = new javax.swing.JPanel();
+        panelRound8 = new RoundersComponents.PanelRound();
+        jLabel25 = new javax.swing.JLabel();
+        jLabel22 = new javax.swing.JLabel();
+        jLabel27 = new javax.swing.JLabel();
+        jLabel23 = new javax.swing.JLabel();
+        jLabel24 = new javax.swing.JLabel();
+        jLabel26 = new javax.swing.JLabel();
+        jPanel19 = new javax.swing.JPanel();
+        jPanel20 = new javax.swing.JPanel();
+        jPanel21 = new javax.swing.JPanel();
+        panelRound9 = new RoundersComponents.PanelRound();
+        jLabel29 = new javax.swing.JLabel();
+        jLabel31 = new javax.swing.JLabel();
+        jLabel28 = new javax.swing.JLabel();
+        jLabel30 = new javax.swing.JLabel();
+        jLabel33 = new javax.swing.JLabel();
+        jLabel32 = new javax.swing.JLabel();
+
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1549, 930));
+        setLayout(new java.awt.BorderLayout());
 
-        javax.swing.GroupLayout layout = new javax.swing.GroupLayout(this);
-        this.setLayout(layout);
-        layout.setHorizontalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1779, Short.MAX_VALUE)
+        panelRound1.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound1.setPreferredSize(new java.awt.Dimension(1549, 200));
+        panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
+
+        jLabel1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
+        jLabel1.setText("Pedidos");
+        jLabel1.setVerticalAlignment(javax.swing.SwingConstants.BOTTOM);
+        jLabel1.setMaximumSize(new java.awt.Dimension(48, 48));
+        jLabel1.setPreferredSize(new java.awt.Dimension(48, 48));
+        panelRound1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(50, 20, 190, 170));
+
+        btnTodosPedidos.setBackground(new java.awt.Color(38, 102, 127));
+        btnTodosPedidos.setForeground(new java.awt.Color(255, 255, 255));
+        btnTodosPedidos.setText("Todos los pedidos");
+        btnTodosPedidos.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        btnTodosPedidos.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnTodosPedidos.setRoundBottomLeft(20);
+        btnTodosPedidos.setRoundBottomRight(20);
+        btnTodosPedidos.setRoundTopLeft(20);
+        btnTodosPedidos.setRoundTopRight(20);
+        btnTodosPedidos.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnTodosPedidosActionPerformed(evt);
+            }
+        });
+        panelRound1.add(btnTodosPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 150, 200, 35));
+
+        btnPedidosEntregados.setBackground(new java.awt.Color(38, 102, 127));
+        btnPedidosEntregados.setForeground(new java.awt.Color(255, 255, 255));
+        btnPedidosEntregados.setText("Entregados");
+        btnPedidosEntregados.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        btnPedidosEntregados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPedidosEntregados.setRoundBottomLeft(20);
+        btnPedidosEntregados.setRoundBottomRight(20);
+        btnPedidosEntregados.setRoundTopLeft(20);
+        btnPedidosEntregados.setRoundTopRight(20);
+        btnPedidosEntregados.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPedidosEntregadosActionPerformed(evt);
+            }
+        });
+        panelRound1.add(btnPedidosEntregados, new org.netbeans.lib.awtextra.AbsoluteConstraints(600, 150, 200, 35));
+
+        btnPedidosPendientes.setBackground(new java.awt.Color(38, 102, 127));
+        btnPedidosPendientes.setForeground(new java.awt.Color(255, 255, 255));
+        btnPedidosPendientes.setText("Pendientes");
+        btnPedidosPendientes.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        btnPedidosPendientes.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPedidosPendientes.setRoundBottomLeft(20);
+        btnPedidosPendientes.setRoundBottomRight(20);
+        btnPedidosPendientes.setRoundTopLeft(20);
+        btnPedidosPendientes.setRoundTopRight(20);
+        panelRound1.add(btnPedidosPendientes, new org.netbeans.lib.awtextra.AbsoluteConstraints(850, 150, 200, 35));
+
+        btnPedidosCancelados.setBackground(new java.awt.Color(38, 102, 127));
+        btnPedidosCancelados.setForeground(new java.awt.Color(255, 255, 255));
+        btnPedidosCancelados.setText("Cancelados");
+        btnPedidosCancelados.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        btnPedidosCancelados.setHorizontalTextPosition(javax.swing.SwingConstants.CENTER);
+        btnPedidosCancelados.setRoundBottomLeft(20);
+        btnPedidosCancelados.setRoundBottomRight(20);
+        btnPedidosCancelados.setRoundTopLeft(20);
+        btnPedidosCancelados.setRoundTopRight(20);
+        panelRound1.add(btnPedidosCancelados, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 150, 200, 35));
+
+        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel3.setLayout(new java.awt.BorderLayout());
+
+        panelRound2.setRoundBottomLeft(250);
+        panelRound2.setRoundBottomRight(250);
+        panelRound2.setRoundTopLeft(250);
+        panelRound2.setRoundTopRight(250);
+
+        javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
+        panelRound2.setLayout(panelRound2Layout);
+        panelRound2Layout.setHorizontalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
-        layout.setVerticalGroup(
-            layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1059, Short.MAX_VALUE)
+        panelRound2Layout.setVerticalGroup(
+            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
         );
+
+        jPanel3.add(panelRound2, java.awt.BorderLayout.LINE_END);
+
+        jPanel4.setLayout(new java.awt.BorderLayout());
+
+        panelRound3.setBackground(new java.awt.Color(255, 255, 255));
+        panelRound3.setPreferredSize(new java.awt.Dimension(50, 100));
+
+        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
+        panelRound3.setLayout(panelRound3Layout);
+        panelRound3Layout.setHorizontalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        panelRound3Layout.setVerticalGroup(
+            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 100, Short.MAX_VALUE)
+        );
+
+        jPanel4.add(panelRound3, java.awt.BorderLayout.LINE_END);
+
+        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel5.setLayout(new java.awt.BorderLayout());
+
+        panelRound4.setRoundBottomLeft(250);
+        panelRound4.setRoundBottomRight(250);
+        panelRound4.setRoundTopLeft(250);
+        panelRound4.setRoundTopRight(250);
+
+        jLabel3.setText("jLabel3");
+
+        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
+        panelRound4.setLayout(panelRound4Layout);
+        panelRound4Layout.setHorizontalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound4Layout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(jLabel3)
+                .addGap(28, 28, 28))
+        );
+        panelRound4Layout.setVerticalGroup(
+            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound4Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addComponent(jLabel3)
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
+        );
+
+        jPanel5.add(panelRound4, java.awt.BorderLayout.LINE_END);
+
+        jPanel4.add(jPanel5, java.awt.BorderLayout.CENTER);
+
+        jPanel3.add(jPanel4, java.awt.BorderLayout.CENTER);
+
+        panelRound1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 1200, 100));
+
+        add(panelRound1, java.awt.BorderLayout.PAGE_START);
+
+        jPanel1.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel1.setLayout(new java.awt.BorderLayout());
+
+        jPanel2.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel2.setPreferredSize(new java.awt.Dimension(1549, 10));
+
+        javax.swing.GroupLayout jPanel2Layout = new javax.swing.GroupLayout(jPanel2);
+        jPanel2.setLayout(jPanel2Layout);
+        jPanel2Layout.setHorizontalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1550, Short.MAX_VALUE)
+        );
+        jPanel2Layout.setVerticalGroup(
+            jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel1.add(jPanel2, java.awt.BorderLayout.PAGE_START);
+
+        jPanel6.setLayout(new java.awt.BorderLayout());
+
+        jPanel7.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel7.setPreferredSize(new java.awt.Dimension(50, 720));
+
+        javax.swing.GroupLayout jPanel7Layout = new javax.swing.GroupLayout(jPanel7);
+        jPanel7.setLayout(jPanel7Layout);
+        jPanel7Layout.setHorizontalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        jPanel7Layout.setVerticalGroup(
+            jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 720, Short.MAX_VALUE)
+        );
+
+        jPanel6.add(jPanel7, java.awt.BorderLayout.LINE_START);
+
+        jPanel8.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel8.setPreferredSize(new java.awt.Dimension(50, 720));
+
+        javax.swing.GroupLayout jPanel8Layout = new javax.swing.GroupLayout(jPanel8);
+        jPanel8.setLayout(jPanel8Layout);
+        jPanel8Layout.setHorizontalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 50, Short.MAX_VALUE)
+        );
+        jPanel8Layout.setVerticalGroup(
+            jPanel8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 720, Short.MAX_VALUE)
+        );
+
+        jPanel6.add(jPanel8, java.awt.BorderLayout.LINE_END);
+
+        jPanel9.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel9.setLayout(new java.awt.BorderLayout());
+
+        panelRound5.setBackground(new java.awt.Color(221, 244, 231));
+        panelRound5.setRoundBottomLeft(50);
+        panelRound5.setRoundBottomRight(50);
+        panelRound5.setRoundTopLeft(50);
+        panelRound5.setRoundTopRight(50);
+
+        jLabel4.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel4.setText("ID");
+
+        jLabel5.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel5.setText("Nombre Cliente");
+
+        jLabel6.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel6.setText("Items");
+
+        jLabel7.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel7.setText("Fecha");
+
+        jLabel8.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel8.setText("Telefono");
+
+        jLabel9.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel9.setText("Estado");
+
+        jLabel10.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel10.setText("Precio");
+
+        javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
+        panelRound5.setLayout(panelRound5Layout);
+        panelRound5Layout.setHorizontalGroup(
+            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound5Layout.createSequentialGroup()
+                .addGap(67, 67, 67)
+                .addComponent(jLabel4)
+                .addGap(225, 225, 225)
+                .addComponent(jLabel5)
+                .addGap(215, 215, 215)
+                .addComponent(jLabel6)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 216, Short.MAX_VALUE)
+                .addComponent(jLabel7)
+                .addGap(150, 150, 150)
+                .addComponent(jLabel8)
+                .addGap(84, 84, 84)
+                .addComponent(jLabel9)
+                .addGap(59, 59, 59)
+                .addComponent(jLabel10)
+                .addGap(84, 84, 84))
+        );
+        panelRound5Layout.setVerticalGroup(
+            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound5Layout.createSequentialGroup()
+                .addContainerGap(65, Short.MAX_VALUE)
+                .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel4)
+                            .addComponent(jLabel5)
+                            .addComponent(jLabel6)
+                            .addComponent(jLabel7))
+                        .addGap(18, 18, 18))
+                    .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound5Layout.createSequentialGroup()
+                        .addGroup(panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                            .addComponent(jLabel10)
+                            .addComponent(jLabel9)
+                            .addComponent(jLabel8))
+                        .addGap(18, 18, 18))))
+        );
+
+        jPanel9.add(panelRound5, java.awt.BorderLayout.PAGE_START);
+
+        jPanel10.setLayout(new java.awt.BorderLayout());
+
+        jPanel11.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel11.setPreferredSize(new java.awt.Dimension(1450, 10));
+
+        javax.swing.GroupLayout jPanel11Layout = new javax.swing.GroupLayout(jPanel11);
+        jPanel11.setLayout(jPanel11Layout);
+        jPanel11Layout.setHorizontalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1450, Short.MAX_VALUE)
+        );
+        jPanel11Layout.setVerticalGroup(
+            jPanel11Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel10.add(jPanel11, java.awt.BorderLayout.PAGE_START);
+
+        jPanel12.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel12.setLayout(new java.awt.BorderLayout());
+
+        panelRound6.setBackground(new java.awt.Color(18, 65, 112));
+        panelRound6.setRoundBottomLeft(50);
+        panelRound6.setRoundBottomRight(50);
+        panelRound6.setRoundTopLeft(50);
+        panelRound6.setRoundTopRight(50);
+
+        jLabel2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel2.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel2.setText("#7823");
+
+        jLabel11.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel11.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel11.setText("Emanuel C");
+
+        jLabel12.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel12.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel12.setText("Combo 2 - Menu");
+
+        jLabel13.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel13.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel13.setText("31 jul 2023");
+
+        jLabel14.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel14.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel14.setText("313-7711");
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+
+        jLabel15.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel15.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel15.setText("$ 34,000");
+
+        javax.swing.GroupLayout panelRound6Layout = new javax.swing.GroupLayout(panelRound6);
+        panelRound6.setLayout(panelRound6Layout);
+        panelRound6Layout.setHorizontalGroup(
+            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound6Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel2)
+                .addGap(226, 226, 226)
+                .addComponent(jLabel11)
+                .addGap(197, 197, 197)
+                .addComponent(jLabel12)
+                .addGap(162, 162, 162)
+                .addComponent(jLabel13)
+                .addGap(140, 140, 140)
+                .addComponent(jLabel14)
+                .addGap(72, 72, 72)
+                .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(39, 39, 39)
+                .addComponent(jLabel15)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+        panelRound6Layout.setVerticalGroup(
+            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound6Layout.createSequentialGroup()
+                .addGap(39, 39, 39)
+                .addGroup(panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel2)
+                    .addComponent(jLabel11)
+                    .addComponent(jLabel12)
+                    .addComponent(jLabel13)
+                    .addComponent(jLabel14)
+                    .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                    .addComponent(jLabel15))
+                .addContainerGap(41, Short.MAX_VALUE))
+        );
+
+        jPanel12.add(panelRound6, java.awt.BorderLayout.PAGE_START);
+
+        jPanel13.setLayout(new java.awt.BorderLayout());
+
+        jPanel14.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel14.setPreferredSize(new java.awt.Dimension(1450, 10));
+
+        javax.swing.GroupLayout jPanel14Layout = new javax.swing.GroupLayout(jPanel14);
+        jPanel14.setLayout(jPanel14Layout);
+        jPanel14Layout.setHorizontalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1450, Short.MAX_VALUE)
+        );
+        jPanel14Layout.setVerticalGroup(
+            jPanel14Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel13.add(jPanel14, java.awt.BorderLayout.PAGE_START);
+
+        jPanel15.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel15.setLayout(new java.awt.BorderLayout());
+
+        panelRound7.setBackground(new java.awt.Color(18, 65, 112));
+        panelRound7.setRoundBottomLeft(50);
+        panelRound7.setRoundBottomRight(50);
+        panelRound7.setRoundTopLeft(50);
+        panelRound7.setRoundTopRight(50);
+
+        jLabel20.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel20.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel20.setText("313-7711");
+
+        jLabel17.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel17.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel17.setText("Emanuel C");
+
+        jLabel19.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel19.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel19.setText("31 jul 2023");
+
+        jLabel21.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel21.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel21.setText("$ 34,000");
+
+        jLabel16.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel16.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel16.setText("#7823");
+
+        jLabel18.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel18.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel18.setText("Combo 2 - Menu");
+
+        javax.swing.GroupLayout panelRound7Layout = new javax.swing.GroupLayout(panelRound7);
+        panelRound7.setLayout(panelRound7Layout);
+        panelRound7Layout.setHorizontalGroup(
+            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound7Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel16)
+                .addGap(226, 226, 226)
+                .addComponent(jLabel17)
+                .addGap(197, 197, 197)
+                .addComponent(jLabel18)
+                .addGap(162, 162, 162)
+                .addComponent(jLabel19)
+                .addGap(140, 140, 140)
+                .addComponent(jLabel20)
+                .addGap(183, 183, 183)
+                .addComponent(jLabel21)
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+        panelRound7Layout.setVerticalGroup(
+            panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound7Layout.createSequentialGroup()
+                .addGap(37, 37, 37)
+                .addGroup(panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel16)
+                    .addComponent(jLabel17)
+                    .addComponent(jLabel18)
+                    .addComponent(jLabel19)
+                    .addComponent(jLabel20)
+                    .addComponent(jLabel21))
+                .addContainerGap(43, Short.MAX_VALUE))
+        );
+
+        jPanel15.add(panelRound7, java.awt.BorderLayout.PAGE_START);
+
+        jPanel16.setLayout(new java.awt.BorderLayout());
+
+        jPanel17.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel17.setPreferredSize(new java.awt.Dimension(1450, 10));
+
+        javax.swing.GroupLayout jPanel17Layout = new javax.swing.GroupLayout(jPanel17);
+        jPanel17.setLayout(jPanel17Layout);
+        jPanel17Layout.setHorizontalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1450, Short.MAX_VALUE)
+        );
+        jPanel17Layout.setVerticalGroup(
+            jPanel17Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel16.add(jPanel17, java.awt.BorderLayout.PAGE_START);
+
+        jPanel18.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel18.setLayout(new java.awt.BorderLayout());
+
+        panelRound8.setBackground(new java.awt.Color(18, 65, 112));
+        panelRound8.setRoundBottomLeft(50);
+        panelRound8.setRoundBottomRight(50);
+        panelRound8.setRoundTopLeft(50);
+        panelRound8.setRoundTopRight(50);
+
+        jLabel25.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel25.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel25.setText("$ 34,000");
+
+        jLabel22.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel22.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel22.setText("313-7711");
+
+        jLabel27.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel27.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel27.setText("Combo 2 - Menu");
+
+        jLabel23.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel23.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel23.setText("Emanuel C");
+
+        jLabel24.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel24.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel24.setText("31 jul 2023");
+
+        jLabel26.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel26.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel26.setText("#7823");
+
+        javax.swing.GroupLayout panelRound8Layout = new javax.swing.GroupLayout(panelRound8);
+        panelRound8.setLayout(panelRound8Layout);
+        panelRound8Layout.setHorizontalGroup(
+            panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound8Layout.createSequentialGroup()
+                .addGap(51, 51, 51)
+                .addComponent(jLabel26)
+                .addGap(226, 226, 226)
+                .addComponent(jLabel23)
+                .addGap(197, 197, 197)
+                .addComponent(jLabel27)
+                .addGap(162, 162, 162)
+                .addComponent(jLabel24)
+                .addGap(140, 140, 140)
+                .addComponent(jLabel22)
+                .addGap(183, 183, 183)
+                .addComponent(jLabel25)
+                .addContainerGap(75, Short.MAX_VALUE))
+        );
+        panelRound8Layout.setVerticalGroup(
+            panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound8Layout.createSequentialGroup()
+                .addGap(36, 36, 36)
+                .addGroup(panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel26)
+                    .addComponent(jLabel23)
+                    .addComponent(jLabel27)
+                    .addComponent(jLabel24)
+                    .addComponent(jLabel22)
+                    .addComponent(jLabel25))
+                .addContainerGap(44, Short.MAX_VALUE))
+        );
+
+        jPanel18.add(panelRound8, java.awt.BorderLayout.PAGE_START);
+
+        jPanel19.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel19.setLayout(new java.awt.BorderLayout());
+
+        jPanel20.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel20.setPreferredSize(new java.awt.Dimension(1450, 10));
+
+        javax.swing.GroupLayout jPanel20Layout = new javax.swing.GroupLayout(jPanel20);
+        jPanel20.setLayout(jPanel20Layout);
+        jPanel20Layout.setHorizontalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 1450, Short.MAX_VALUE)
+        );
+        jPanel20Layout.setVerticalGroup(
+            jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 10, Short.MAX_VALUE)
+        );
+
+        jPanel19.add(jPanel20, java.awt.BorderLayout.PAGE_START);
+
+        jPanel21.setBackground(new java.awt.Color(255, 255, 255));
+        jPanel21.setLayout(new java.awt.BorderLayout());
+
+        panelRound9.setBackground(new java.awt.Color(18, 65, 112));
+        panelRound9.setRoundBottomLeft(50);
+        panelRound9.setRoundBottomRight(50);
+        panelRound9.setRoundTopLeft(50);
+        panelRound9.setRoundTopRight(50);
+
+        jLabel29.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel29.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel29.setText("Emanuel C");
+
+        jLabel31.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel31.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel31.setText("$ 34,000");
+
+        jLabel28.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel28.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel28.setText("313-7711");
+
+        jLabel30.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel30.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel30.setText("31 jul 2023");
+
+        jLabel33.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel33.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel33.setText("Combo 2 - Menu");
+
+        jLabel32.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
+        jLabel32.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel32.setText("#7823");
+
+        javax.swing.GroupLayout panelRound9Layout = new javax.swing.GroupLayout(panelRound9);
+        panelRound9.setLayout(panelRound9Layout);
+        panelRound9Layout.setHorizontalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound9Layout.createSequentialGroup()
+                .addGap(52, 52, 52)
+                .addComponent(jLabel32)
+                .addGap(226, 226, 226)
+                .addComponent(jLabel29)
+                .addGap(197, 197, 197)
+                .addComponent(jLabel33)
+                .addGap(162, 162, 162)
+                .addComponent(jLabel30)
+                .addGap(140, 140, 140)
+                .addComponent(jLabel28)
+                .addGap(183, 183, 183)
+                .addComponent(jLabel31)
+                .addContainerGap(74, Short.MAX_VALUE))
+        );
+        panelRound9Layout.setVerticalGroup(
+            panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGroup(panelRound9Layout.createSequentialGroup()
+                .addGap(34, 34, 34)
+                .addGroup(panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
+                    .addComponent(jLabel32)
+                    .addComponent(jLabel29)
+                    .addComponent(jLabel33)
+                    .addComponent(jLabel30)
+                    .addComponent(jLabel28)
+                    .addComponent(jLabel31))
+                .addContainerGap(46, Short.MAX_VALUE))
+        );
+
+        jPanel21.add(panelRound9, java.awt.BorderLayout.PAGE_START);
+
+        jPanel19.add(jPanel21, java.awt.BorderLayout.CENTER);
+
+        jPanel18.add(jPanel19, java.awt.BorderLayout.CENTER);
+
+        jPanel16.add(jPanel18, java.awt.BorderLayout.CENTER);
+
+        jPanel15.add(jPanel16, java.awt.BorderLayout.CENTER);
+
+        jPanel13.add(jPanel15, java.awt.BorderLayout.CENTER);
+
+        jPanel12.add(jPanel13, java.awt.BorderLayout.CENTER);
+
+        jPanel10.add(jPanel12, java.awt.BorderLayout.CENTER);
+
+        jPanel9.add(jPanel10, java.awt.BorderLayout.CENTER);
+
+        jPanel6.add(jPanel9, java.awt.BorderLayout.CENTER);
+
+        jPanel1.add(jPanel6, java.awt.BorderLayout.CENTER);
+
+        add(jPanel1, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
+
+    private void btnTodosPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnTodosPedidosActionPerformed
+        // TODO add your handling code here:
+        
+    }//GEN-LAST:event_btnTodosPedidosActionPerformed
+
+    private void btnPedidosEntregadosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosEntregadosActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_btnPedidosEntregadosActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private RoundersComponents.ButtonRound btnPedidosCancelados;
+    private RoundersComponents.ButtonRound btnPedidosEntregados;
+    private RoundersComponents.ButtonRound btnPedidosPendientes;
+    private RoundersComponents.ButtonRound btnTodosPedidos;
+    private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
+    private javax.swing.JLabel jLabel15;
+    private javax.swing.JLabel jLabel16;
+    private javax.swing.JLabel jLabel17;
+    private javax.swing.JLabel jLabel18;
+    private javax.swing.JLabel jLabel19;
+    private javax.swing.JLabel jLabel2;
+    private javax.swing.JLabel jLabel20;
+    private javax.swing.JLabel jLabel21;
+    private javax.swing.JLabel jLabel22;
+    private javax.swing.JLabel jLabel23;
+    private javax.swing.JLabel jLabel24;
+    private javax.swing.JLabel jLabel25;
+    private javax.swing.JLabel jLabel26;
+    private javax.swing.JLabel jLabel27;
+    private javax.swing.JLabel jLabel28;
+    private javax.swing.JLabel jLabel29;
+    private javax.swing.JLabel jLabel3;
+    private javax.swing.JLabel jLabel30;
+    private javax.swing.JLabel jLabel31;
+    private javax.swing.JLabel jLabel32;
+    private javax.swing.JLabel jLabel33;
+    private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel jLabel5;
+    private javax.swing.JLabel jLabel6;
+    private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
+    private javax.swing.JPanel jPanel1;
+    private javax.swing.JPanel jPanel10;
+    private javax.swing.JPanel jPanel11;
+    private javax.swing.JPanel jPanel12;
+    private javax.swing.JPanel jPanel13;
+    private javax.swing.JPanel jPanel14;
+    private javax.swing.JPanel jPanel15;
+    private javax.swing.JPanel jPanel16;
+    private javax.swing.JPanel jPanel17;
+    private javax.swing.JPanel jPanel18;
+    private javax.swing.JPanel jPanel19;
+    private javax.swing.JPanel jPanel2;
+    private javax.swing.JPanel jPanel20;
+    private javax.swing.JPanel jPanel21;
+    private javax.swing.JPanel jPanel3;
+    private javax.swing.JPanel jPanel4;
+    private javax.swing.JPanel jPanel5;
+    private javax.swing.JPanel jPanel6;
+    private javax.swing.JPanel jPanel7;
+    private javax.swing.JPanel jPanel8;
+    private javax.swing.JPanel jPanel9;
+    private RoundersComponents.PanelRound panelRound1;
+    private RoundersComponents.PanelRound panelRound2;
+    private RoundersComponents.PanelRound panelRound3;
+    private RoundersComponents.PanelRound panelRound4;
+    private RoundersComponents.PanelRound panelRound5;
+    private RoundersComponents.PanelRound panelRound6;
+    private RoundersComponents.PanelRound panelRound7;
+    private RoundersComponents.PanelRound panelRound8;
+    private RoundersComponents.PanelRound panelRound9;
     // End of variables declaration//GEN-END:variables
 }

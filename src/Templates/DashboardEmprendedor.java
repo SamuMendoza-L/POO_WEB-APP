@@ -56,7 +56,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound1.setText("Dashboard");
         buttonRound1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound1.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         buttonRound1.setPreferredSize(new java.awt.Dimension(240, 23));
         buttonRound1.addActionListener(new java.awt.event.ActionListener() {
@@ -64,50 +64,50 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
                 buttonRound1ActionPerformed(evt);
             }
         });
-        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 170, 200, 40));
+        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 180, 40));
 
         buttonRound2.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound2.setText("Pedidos");
         buttonRound2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound2.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         buttonRound2.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 buttonRound2ActionPerformed(evt);
             }
         });
-        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 290, 200, 40));
+        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 180, 40));
 
         buttonRound3.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound3.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound3.setText("Finanzas");
         buttonRound3.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound3.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 350, 200, 40));
+        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 180, 40));
 
         buttonRound4.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound4.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound4.setText("Perfil");
         buttonRound4.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound4.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 410, 200, 40));
+        menu.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 180, 40));
 
         buttonRound5.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound5.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound5.setText("Cerrar Sesión");
-        buttonRound5.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        buttonRound5.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
         buttonRound5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound5.setVerifyInputWhenFocusTarget(false);
-        menu.add(buttonRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 870, 240, 40));
+        menu.add(buttonRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 870, 180, 40));
 
         buttonRound6.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound6.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound6.setText("Productos");
         buttonRound6.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound6.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
         buttonRound6.setPreferredSize(new java.awt.Dimension(240, 23));
         buttonRound6.addActionListener(new java.awt.event.ActionListener() {
@@ -115,15 +115,15 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
                 buttonRound6ActionPerformed(evt);
             }
         });
-        menu.add(buttonRound6, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 230, 200, 40));
+        menu.add(buttonRound6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 180, 40));
 
         buttonRound7.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound7.setForeground(new java.awt.Color(255, 255, 255));
         buttonRound7.setText("Metricas");
         buttonRound7.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound7.setHorizontalAlignment(javax.swing.SwingConstants.RIGHT);
+        buttonRound7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound7, new org.netbeans.lib.awtextra.AbsoluteConstraints(0, 470, 200, 40));
+        menu.add(buttonRound7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 180, 40));
 
         jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
 
