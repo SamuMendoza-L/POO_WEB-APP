@@ -43,26 +43,41 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jPanel11 = new javax.swing.JPanel();
         jPanel12 = new javax.swing.JPanel();
         panelRound2 = new RoundersComponents.PanelRound();
-        jLabel2 = new javax.swing.JLabel();
-        jLabel3 = new javax.swing.JLabel();
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
-        jLabel4 = new javax.swing.JLabel();
-        jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jLabel7 = new javax.swing.JLabel();
-        jLabel8 = new javax.swing.JLabel();
         jTextField2 = new javax.swing.JTextField();
         jTextField3 = new javax.swing.JTextField();
         jTextField4 = new javax.swing.JTextField();
         jTextField5 = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
         jTextArea1 = new javax.swing.JTextArea();
-        jComboBox1 = new javax.swing.JComboBox<>();
         buttonRound1 = new RoundersComponents.ButtonRound();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
+        jLabel12 = new javax.swing.JLabel();
+        jLabel13 = new javax.swing.JLabel();
+        jLabel14 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         panelRound3 = new RoundersComponents.PanelRound();
+        jLabel2 = new javax.swing.JLabel();
+        jSeparator3 = new javax.swing.JSeparator();
+        jLabel4 = new javax.swing.JLabel();
+        jLabel5 = new javax.swing.JLabel();
+        jLabel7 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
+        jTextField1 = new javax.swing.JTextField();
+        jTextField6 = new javax.swing.JTextField();
+        jTextField7 = new javax.swing.JTextField();
+        jTextField8 = new javax.swing.JTextField();
+        jLabel3 = new javax.swing.JLabel();
+        jComboBox1 = new javax.swing.JComboBox<>();
+        buttonRound2 = new RoundersComponents.ButtonRound();
+        buttonRound3 = new RoundersComponents.ButtonRound();
+        buttonRound4 = new RoundersComponents.ButtonRound();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1549, 930));
@@ -216,36 +231,12 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         panelRound2.setRoundBottomRight(50);
         panelRound2.setRoundTopLeft(50);
         panelRound2.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
-
-        jLabel2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
-        jLabel2.setText("Un nuevo Producto");
-        panelRound2.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 23, -1, -1));
-
-        jLabel3.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel3.setText("Estado");
-        panelRound2.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, -1, -1));
         panelRound2.add(jSeparator1, new org.netbeans.lib.awtextra.AbsoluteConstraints(370, 80, -1, -1));
         panelRound2.add(jSeparator2, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 70, 710, 10));
-
-        jLabel4.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel4.setText("Código");
-        panelRound2.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
-
-        jLabel5.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel5.setText("Nombre");
-        panelRound2.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
 
         jLabel6.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
         jLabel6.setText("Descripción");
         panelRound2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
-
-        jLabel7.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel7.setText("Precio");
-        panelRound2.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, -1, -1));
-
-        jLabel8.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel8.setText("Stock");
-        panelRound2.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
         panelRound2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 93, 280, 40));
         panelRound2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 280, 40));
         panelRound2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 240, 40));
@@ -256,9 +247,6 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jScrollPane2.setViewportView(jTextArea1);
 
         panelRound2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 230, 250, -1));
-
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
-        panelRound2.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 240, 40));
 
         buttonRound1.setBackground(new java.awt.Color(38, 102, 127));
         buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
@@ -274,6 +262,33 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
             }
         });
         panelRound2.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 330, 40));
+
+        jLabel9.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
+        jLabel9.setText("Un nuevo Producto");
+        panelRound2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 23, -1, -1));
+
+        jLabel10.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel10.setText("Código");
+        panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+
+        jLabel11.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel11.setText("Nombre");
+        panelRound2.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 170, -1, -1));
+
+        jLabel12.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel12.setText("Precio");
+        panelRound2.add(jLabel12, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 90, -1, -1));
+
+        jLabel13.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel13.setText("Stock");
+        panelRound2.add(jLabel13, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 170, -1, -1));
+
+        jLabel14.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel14.setText("Estado");
+        panelRound2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, -1, -1));
+
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
+        panelRound2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 240, 40));
 
         jPanel12.add(panelRound2, java.awt.BorderLayout.PAGE_START);
 
@@ -300,17 +315,76 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         panelRound3.setRoundBottomLeft(50);
         panelRound3.setRoundBottomRight(50);
         panelRound3.setRoundTopLeft(50);
+        panelRound3.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
-        panelRound3.setLayout(panelRound3Layout);
-        panelRound3Layout.setHorizontalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 763, Short.MAX_VALUE)
-        );
-        panelRound3Layout.setVerticalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 339, Short.MAX_VALUE)
-        );
+        jLabel2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
+        jLabel2.setText("Buscar Información");
+        panelRound3.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 23, -1, -1));
+        panelRound3.add(jSeparator3, new org.netbeans.lib.awtextra.AbsoluteConstraints(26, 76, 710, 10));
+
+        jLabel4.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel4.setText("Código");
+        panelRound3.add(jLabel4, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
+
+        jLabel5.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel5.setText("Nombre");
+        panelRound3.add(jLabel5, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 150, -1, -1));
+
+        jLabel7.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel7.setText("Precio");
+        panelRound3.add(jLabel7, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 190, -1, -1));
+
+        jLabel8.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel8.setText("Stock");
+        panelRound3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
+        panelRound3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 340, -1));
+        panelRound3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 340, -1));
+        panelRound3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 340, -1));
+        panelRound3.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 340, -1));
+
+        jLabel3.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
+        jLabel3.setText("Estado");
+        panelRound3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
+
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
+        panelRound3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 340, 40));
+
+        buttonRound2.setBackground(new java.awt.Color(38, 102, 127));
+        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound2.setText("BUSCAR");
+        buttonRound2.setRoundBottomLeft(30);
+        buttonRound2.setRoundBottomRight(30);
+        buttonRound2.setRoundTopLeft(30);
+        buttonRound2.setRoundTopRight(30);
+        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound2ActionPerformed(evt);
+            }
+        });
+        panelRound3.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 200, 45));
+
+        buttonRound3.setBackground(new java.awt.Color(38, 102, 127));
+        buttonRound3.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound3.setText("EDITAR");
+        buttonRound3.setRoundBottomLeft(30);
+        buttonRound3.setRoundBottomRight(30);
+        buttonRound3.setRoundTopLeft(30);
+        buttonRound3.setRoundTopRight(30);
+        panelRound3.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 200, 45));
+
+        buttonRound4.setBackground(new java.awt.Color(38, 102, 127));
+        buttonRound4.setForeground(new java.awt.Color(255, 255, 255));
+        buttonRound4.setText("ELIMINAR");
+        buttonRound4.setRoundBottomLeft(30);
+        buttonRound4.setRoundBottomRight(30);
+        buttonRound4.setRoundTopLeft(30);
+        buttonRound4.setRoundTopRight(30);
+        buttonRound4.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound4ActionPerformed(evt);
+            }
+        });
+        panelRound3.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 200, 45));
 
         jPanel13.add(panelRound3, java.awt.BorderLayout.CENTER);
 
@@ -333,11 +407,28 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         
     }//GEN-LAST:event_buttonRound1ActionPerformed
 
+    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRound2ActionPerformed
+
+    private void buttonRound4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound4ActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_buttonRound4ActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RoundersComponents.ButtonRound buttonRound1;
+    private RoundersComponents.ButtonRound buttonRound2;
+    private RoundersComponents.ButtonRound buttonRound3;
+    private RoundersComponents.ButtonRound buttonRound4;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
+    private javax.swing.JLabel jLabel13;
+    private javax.swing.JLabel jLabel14;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
@@ -345,6 +436,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
     private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -363,12 +455,17 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JScrollPane jScrollPane2;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
+    private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
     private javax.swing.JTextArea jTextArea1;
+    private javax.swing.JTextField jTextField1;
     private javax.swing.JTextField jTextField2;
     private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
+    private javax.swing.JTextField jTextField6;
+    private javax.swing.JTextField jTextField7;
+    private javax.swing.JTextField jTextField8;
     private RoundersComponents.PanelRound panelRound1;
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;

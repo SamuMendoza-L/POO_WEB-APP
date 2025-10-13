@@ -282,6 +282,15 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetButtons();
         
+        Finanzas Fi = new Finanzas(emprendedor);
+        Fi.setSize(1549, 930);
+        Fi.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(Fi, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+        
         
         
         btnFinanzas.setBackground(Color.white);
