@@ -33,27 +33,27 @@ public class DashboardE extends javax.swing.JPanel {
         lblNombreU.setText(emprendedor.getName());
         
         
-        // Crear el formateador de moneda para Colombia
+        double totalIngresos = emprendedor.getTotalIngresos();
+        double totalEgresos = emprendedor.getTotalEgresos();
+
         NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
-
-        // Obtener el valor del emprendedor
-        double ingresos = emprendedor.getIngresos(); // asegúrate que retorne double o int
-        double egresos = emprendedor.getIngresos();
-
-        // Formatearlo y mostrarlo
-        lblIngresosMensual.setText(formatoCOP.format(ingresos));
-        lblEgresosMensuales.setText(formatoCOP.format(egresos));
-
+        lblIngresosMensual.setText(formatoCOP.format(totalIngresos));
+        lblEgresosMensuales.setText(formatoCOP.format(totalEgresos));
         
         
+        int CantidadP = emprendedor.getTotalProductos();
+        String CantidadProductos = Integer.toString(CantidadP);
+        lblCantidadProductos.setText(CantidadProductos);
         
+        int CantidadPe = emprendedor.getTotalPedidos();
+        String CantidadPedidos = Integer.toString(CantidadPe);
+        lblCantidadPedidos.setText(CantidadPedidos);
         
+        String nombreN = emprendedor.getNombreNegocio();
+        lblNombreNegocio.setText(nombreN);
         
-        
-        
-        
-        
-        
+        String tipoN = emprendedor.getTipoNegocio();
+        lblTipoNegocio.setText(tipoN);
         
     }
 
@@ -72,11 +72,11 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel4 = new javax.swing.JPanel();
         jPanel5 = new javax.swing.JPanel();
         panelRound1 = new RoundersComponents.PanelRound();
-        jLabel1 = new javax.swing.JLabel();
         lblSaludo = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         lblNombreU = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
+        jLabel8 = new javax.swing.JLabel();
         jPanel6 = new javax.swing.JPanel();
         jPanel7 = new javax.swing.JPanel();
         jPanel8 = new javax.swing.JPanel();
@@ -106,9 +106,15 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel20 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
         panelRound5 = new RoundersComponents.PanelRound();
+        jLabel1 = new javax.swing.JLabel();
+        jLabel9 = new javax.swing.JLabel();
+        jLabel10 = new javax.swing.JLabel();
+        lblNombreNegocio = new javax.swing.JLabel();
+        lblTipoNegocio = new javax.swing.JLabel();
+        jLabel11 = new javax.swing.JLabel();
         jPanel22 = new javax.swing.JPanel();
         jPanel23 = new javax.swing.JPanel();
-        panelRound6 = new RoundersComponents.PanelRound();
+        jLabel12 = new javax.swing.JLabel();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1549, 930));
@@ -121,7 +127,7 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel1.setLayout(jPanel1Layout);
         jPanel1Layout.setHorizontalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1543, Short.MAX_VALUE)
+            .addGap(0, 1546, Short.MAX_VALUE)
         );
         jPanel1Layout.setVerticalGroup(
             jPanel1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -141,7 +147,7 @@ public class DashboardE extends javax.swing.JPanel {
         );
         jPanel2Layout.setVerticalGroup(
             jPanel2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 870, Short.MAX_VALUE)
+            .addGap(0, 860, Short.MAX_VALUE)
         );
 
         add(jPanel2, java.awt.BorderLayout.LINE_START);
@@ -153,7 +159,7 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel3.setLayout(jPanel3Layout);
         jPanel3Layout.setHorizontalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1543, Short.MAX_VALUE)
+            .addGap(0, 1546, Short.MAX_VALUE)
         );
         jPanel3Layout.setVerticalGroup(
             jPanel3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -173,7 +179,7 @@ public class DashboardE extends javax.swing.JPanel {
         );
         jPanel4Layout.setVerticalGroup(
             jPanel4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 870, Short.MAX_VALUE)
+            .addGap(0, 860, Short.MAX_VALUE)
         );
 
         add(jPanel4, java.awt.BorderLayout.LINE_END);
@@ -188,13 +194,9 @@ public class DashboardE extends javax.swing.JPanel {
         panelRound1.setRoundTopRight(50);
         panelRound1.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        jLabel1.setFont(new java.awt.Font("Noto Sans NKo", 1, 68)); // NOI18N
-        jLabel1.setText("Dashboard");
-        panelRound1.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 490, -1));
-
         lblSaludo.setFont(new java.awt.Font("Noto Sans Myanmar", 2, 18)); // NOI18N
         lblSaludo.setForeground(new java.awt.Color(102, 102, 102));
-        panelRound1.add(lblSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 60, 430, 50));
+        panelRound1.add(lblSaludo, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 40, 430, 50));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/IconProfile-User.png"))); // NOI18N
         panelRound1.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(1050, 30, -1, -1));
@@ -205,6 +207,10 @@ public class DashboardE extends javax.swing.JPanel {
         jLabel3.setFont(new java.awt.Font("Noto Sans Myanmar", 2, 14)); // NOI18N
         jLabel3.setText("Dueño de Negocio");
         panelRound1.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(1220, 120, 140, -1));
+
+        jLabel8.setFont(new java.awt.Font("Noto Sans NKo", 1, 68)); // NOI18N
+        jLabel8.setText("Dashboard");
+        panelRound1.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, 490, -1));
 
         jPanel5.add(panelRound1, java.awt.BorderLayout.PAGE_START);
 
@@ -217,7 +223,7 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel7.setLayout(jPanel7Layout);
         jPanel7Layout.setHorizontalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 1503, Short.MAX_VALUE)
+            .addGap(0, 1506, Short.MAX_VALUE)
         );
         jPanel7Layout.setVerticalGroup(
             jPanel7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -285,6 +291,7 @@ public class DashboardE extends javax.swing.JPanel {
 
         lblEgresosMensuales.setFont(new java.awt.Font("Noto Sans Kannada", 1, 48)); // NOI18N
         lblEgresosMensuales.setForeground(new java.awt.Color(255, 255, 255));
+        lblEgresosMensuales.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelRound2.add(lblEgresosMensuales, java.awt.BorderLayout.CENTER);
 
         jLabel6.setFont(new java.awt.Font("Noto Sans Kannada", 2, 18)); // NOI18N
@@ -324,7 +331,9 @@ public class DashboardE extends javax.swing.JPanel {
         panelRound3.setRoundTopRight(50);
         panelRound3.setLayout(new java.awt.BorderLayout());
 
-        lblCantidadProductos.setText("jLabel7");
+        lblCantidadProductos.setFont(new java.awt.Font("Noto Sans Kannada", 1, 48)); // NOI18N
+        lblCantidadProductos.setForeground(new java.awt.Color(255, 255, 255));
+        lblCantidadProductos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelRound3.add(lblCantidadProductos, java.awt.BorderLayout.CENTER);
 
         jLabel7.setFont(new java.awt.Font("Noto Sans Kannada", 2, 18)); // NOI18N
@@ -367,10 +376,12 @@ public class DashboardE extends javax.swing.JPanel {
         jLabel4.setFont(new java.awt.Font("Noto Sans Kannada", 2, 18)); // NOI18N
         jLabel4.setForeground(new java.awt.Color(255, 255, 255));
         jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("Cantidad de prodcutos");
+        jLabel4.setText("Cantidad de Pedidos");
         panelRound4.add(jLabel4, java.awt.BorderLayout.PAGE_START);
 
-        lblCantidadPedidos.setText("jLabel8");
+        lblCantidadPedidos.setFont(new java.awt.Font("Noto Sans Kannada", 1, 48)); // NOI18N
+        lblCantidadPedidos.setForeground(new java.awt.Color(255, 255, 255));
+        lblCantidadPedidos.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         panelRound4.add(lblCantidadPedidos, java.awt.BorderLayout.CENTER);
 
         jPanel18.add(panelRound4, java.awt.BorderLayout.PAGE_START);
@@ -402,7 +413,7 @@ public class DashboardE extends javax.swing.JPanel {
         );
         jPanel20Layout.setVerticalGroup(
             jPanel20Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 610, Short.MAX_VALUE)
+            .addGap(0, 600, Short.MAX_VALUE)
         );
 
         jPanel19.add(jPanel20, java.awt.BorderLayout.LINE_START);
@@ -416,17 +427,28 @@ public class DashboardE extends javax.swing.JPanel {
         panelRound5.setRoundBottomRight(50);
         panelRound5.setRoundTopLeft(50);
         panelRound5.setRoundTopRight(50);
+        panelRound5.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        javax.swing.GroupLayout panelRound5Layout = new javax.swing.GroupLayout(panelRound5);
-        panelRound5.setLayout(panelRound5Layout);
-        panelRound5Layout.setHorizontalGroup(
-            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 943, Short.MAX_VALUE)
-        );
-        panelRound5Layout.setVerticalGroup(
-            panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 250, Short.MAX_VALUE)
-        );
+        jLabel1.setFont(new java.awt.Font("Noto Sans NKo", 1, 48)); // NOI18N
+        jLabel1.setText("Sobre tu Negocio");
+        panelRound5.add(jLabel1, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 30, 390, -1));
+
+        jLabel9.setFont(new java.awt.Font("Oriya MN", 0, 24)); // NOI18N
+        jLabel9.setText("Tipo de negocio:");
+        panelRound5.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 160, 230, 30));
+
+        jLabel10.setFont(new java.awt.Font("Oriya MN", 0, 24)); // NOI18N
+        jLabel10.setText("Nombre de tu negocio:");
+        panelRound5.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 120, 280, 30));
+
+        lblNombreNegocio.setFont(new java.awt.Font("Noto Sans Myanmar", 2, 24)); // NOI18N
+        panelRound5.add(lblNombreNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(330, 120, 220, 30));
+
+        lblTipoNegocio.setFont(new java.awt.Font("Noto Sans Myanmar", 2, 24)); // NOI18N
+        panelRound5.add(lblTipoNegocio, new org.netbeans.lib.awtextra.AbsoluteConstraints(270, 160, 280, 30));
+
+        jLabel11.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/Icon-NegocioInformacion.png"))); // NOI18N
+        panelRound5.add(jLabel11, new org.netbeans.lib.awtextra.AbsoluteConstraints(700, 30, -1, -1));
 
         jPanel21.add(panelRound5, java.awt.BorderLayout.PAGE_START);
 
@@ -440,7 +462,7 @@ public class DashboardE extends javax.swing.JPanel {
         jPanel23.setLayout(jPanel23Layout);
         jPanel23Layout.setHorizontalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 943, Short.MAX_VALUE)
+            .addGap(0, 946, Short.MAX_VALUE)
         );
         jPanel23Layout.setVerticalGroup(
             jPanel23Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -449,24 +471,8 @@ public class DashboardE extends javax.swing.JPanel {
 
         jPanel22.add(jPanel23, java.awt.BorderLayout.PAGE_START);
 
-        panelRound6.setBackground(new java.awt.Color(221, 244, 231));
-        panelRound6.setRoundBottomLeft(50);
-        panelRound6.setRoundBottomRight(50);
-        panelRound6.setRoundTopLeft(50);
-        panelRound6.setRoundTopRight(50);
-
-        javax.swing.GroupLayout panelRound6Layout = new javax.swing.GroupLayout(panelRound6);
-        panelRound6.setLayout(panelRound6Layout);
-        panelRound6Layout.setHorizontalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 943, Short.MAX_VALUE)
-        );
-        panelRound6Layout.setVerticalGroup(
-            panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 350, Short.MAX_VALUE)
-        );
-
-        jPanel22.add(panelRound6, java.awt.BorderLayout.CENTER);
+        jLabel12.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/Banner (1).png"))); // NOI18N
+        jPanel22.add(jLabel12, java.awt.BorderLayout.CENTER);
 
         jPanel21.add(jPanel22, java.awt.BorderLayout.CENTER);
 
@@ -485,12 +491,17 @@ public class DashboardE extends javax.swing.JPanel {
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RoundersComponents.PanelRound FrameVentasTotales;
     private javax.swing.JLabel jLabel1;
+    private javax.swing.JLabel jLabel10;
+    private javax.swing.JLabel jLabel11;
+    private javax.swing.JLabel jLabel12;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
     private javax.swing.JLabel jLabel5;
     private javax.swing.JLabel jLabel6;
     private javax.swing.JLabel jLabel7;
+    private javax.swing.JLabel jLabel8;
+    private javax.swing.JLabel jLabel9;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel jPanel10;
     private javax.swing.JPanel jPanel11;
@@ -518,13 +529,14 @@ public class DashboardE extends javax.swing.JPanel {
     private javax.swing.JLabel lblCantidadProductos;
     private javax.swing.JLabel lblEgresosMensuales;
     private javax.swing.JLabel lblIngresosMensual;
+    private javax.swing.JLabel lblNombreNegocio;
     private javax.swing.JLabel lblNombreU;
     private javax.swing.JLabel lblSaludo;
+    private javax.swing.JLabel lblTipoNegocio;
     private RoundersComponents.PanelRound panelRound1;
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;
     private RoundersComponents.PanelRound panelRound4;
     private RoundersComponents.PanelRound panelRound5;
-    private RoundersComponents.PanelRound panelRound6;
     // End of variables declaration//GEN-END:variables
 }

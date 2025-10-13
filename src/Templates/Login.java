@@ -158,7 +158,7 @@ public class Login extends javax.swing.JFrame {
         
         Main.GetListaUsuarios().BuscarUsuario(email, Pass, this);
         
-        Usuario UserSesion = Main.GetListaUsuarios().BuscarUsuario(email, Pass, this);
+        
     }//GEN-LAST:event_btnIngresarActionPerformed
 
     
