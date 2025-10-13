@@ -1,4 +1,3 @@
-
 package Estructuras;
 import Templates.DashboardEmprendedor;
 import Templates.DashboardCliente;
@@ -18,6 +17,7 @@ public class Lista {
         return primero;
     }
     
+   
     public boolean esVacia(){
         return primero == null;
     }
@@ -44,25 +44,31 @@ public class Lista {
         }
     }
     
-    public void BuscarUsuario(String email, String Pass, Login loginFrame){
+    public Usuario BuscarUsuario(String email, String Pass, Login loginFrame){
         Nodo aux = primero;
         while(aux!=null && !((Usuario)aux.getDato()).getEmail().equals(email))
             aux = aux.getEnlace();
-        if(aux!=null && ((Usuario)aux.getDato()).getEmail().equals(email) && ((Usuario)aux.getDato()).getPassword().equals(Pass))
-            if(((Usuario)aux.getDato()).getRole().equals("Cliente")){
+        
+        if(aux!=null && ((Usuario)aux.getDato()).getEmail().equals(email) && ((Usuario)aux.getDato()).getPassword().equals(Pass)) {
+            Usuario usuarioEncontrado = (Usuario)aux.getDato();
+            
+            if(usuarioEncontrado.getRole().equals("Cliente")){
                 new DashboardCliente().setVisible(true);
                 loginFrame.dispose();
-                
             }
-            else if(((Usuario)aux.getDato()).getRole().equals("Emprendedor")){
+            else if(usuarioEncontrado.getRole().equals("Emprendedor")){
                 new DashboardEmprendedor().setVisible(true);
                 loginFrame.dispose();
             }
-        
-        else{
+            
+            return usuarioEncontrado;
+        } else {
             JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
+            return null;
         }
     }
+    
+    
     
     
     

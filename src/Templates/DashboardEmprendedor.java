@@ -5,6 +5,10 @@
 package Templates;
 
 import java.awt.BorderLayout;
+import java.awt.Color;
+import javax.swing.JOptionPane;
+import models.Emprendedor;
+import models.Usuario;
 
 /**
  *
@@ -15,10 +19,27 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     /**
      * Creates new form DashboardEmprendedor
      */
-    public DashboardEmprendedor() {
+    
+    private Emprendedor emprendedor;    
+    public DashboardEmprendedor(Usuario usuario) {
         initComponents();
         
+        if (usuario instanceof Emprendedor) {
+            this.emprendedor = (Emprendedor) usuario;
+        }
+        
+        JOptionPane.showMessageDialog(null, "Acabas de iniciar sesion a nombre de: " + emprendedor.getName());
+        
         PanelContenedor.setLayout(new BorderLayout());
+        DashboardE De = new DashboardE();
+        De.setSize(1549, 930);
+        De.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(De, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+        
         
         
     }
@@ -34,13 +55,13 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
         jPanel1 = new javax.swing.JPanel();
         menu = new javax.swing.JPanel();
-        buttonRound1 = new RoundersComponents.ButtonRound();
-        buttonRound2 = new RoundersComponents.ButtonRound();
-        buttonRound3 = new RoundersComponents.ButtonRound();
-        buttonRound4 = new RoundersComponents.ButtonRound();
+        btnHome = new RoundersComponents.ButtonRound();
+        btnPedidos = new RoundersComponents.ButtonRound();
+        btnFinanzas = new RoundersComponents.ButtonRound();
+        btnPerfil = new RoundersComponents.ButtonRound();
         buttonRound5 = new RoundersComponents.ButtonRound();
-        buttonRound6 = new RoundersComponents.ButtonRound();
-        buttonRound7 = new RoundersComponents.ButtonRound();
+        btnProductos = new RoundersComponents.ButtonRound();
+        btnMetricas = new RoundersComponents.ButtonRound();
         PanelContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -52,48 +73,62 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         menu.setPreferredSize(new java.awt.Dimension(240, 930));
         menu.setLayout(new org.netbeans.lib.awtextra.AbsoluteLayout());
 
-        buttonRound1.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound1.setText("Dashboard");
-        buttonRound1.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound1.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        buttonRound1.setPreferredSize(new java.awt.Dimension(240, 23));
-        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
+        btnHome.setBackground(new java.awt.Color(18, 65, 112));
+        btnHome.setForeground(new java.awt.Color(255, 255, 255));
+        btnHome.setText("Home");
+        btnHome.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnHome.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnHome.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnHome.setPreferredSize(new java.awt.Dimension(240, 23));
+        btnHome.setRoundBottomLeft(30);
+        btnHome.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound1ActionPerformed(evt);
+                btnHomeActionPerformed(evt);
             }
         });
-        menu.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 180, 40));
+        menu.add(btnHome, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 170, 200, 40));
 
-        buttonRound2.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound2.setText("Pedidos");
-        buttonRound2.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound2.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound2.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+        btnPedidos.setBackground(new java.awt.Color(18, 65, 112));
+        btnPedidos.setForeground(new java.awt.Color(255, 255, 255));
+        btnPedidos.setText("Pedidos");
+        btnPedidos.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnPedidos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnPedidos.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnPedidos.setRoundBottomLeft(30);
+        btnPedidos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound2ActionPerformed(evt);
+                btnPedidosActionPerformed(evt);
             }
         });
-        menu.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 180, 40));
+        menu.add(btnPedidos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 290, 200, 40));
 
-        buttonRound3.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound3.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound3.setText("Finanzas");
-        buttonRound3.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound3.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound3.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 180, 40));
+        btnFinanzas.setBackground(new java.awt.Color(18, 65, 112));
+        btnFinanzas.setForeground(new java.awt.Color(255, 255, 255));
+        btnFinanzas.setText("Finanzas");
+        btnFinanzas.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnFinanzas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnFinanzas.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnFinanzas.setRoundBottomLeft(30);
+        btnFinanzas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnFinanzasActionPerformed(evt);
+            }
+        });
+        menu.add(btnFinanzas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 350, 200, 40));
 
-        buttonRound4.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound4.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound4.setText("Perfil");
-        buttonRound4.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound4.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound4.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 180, 40));
+        btnPerfil.setBackground(new java.awt.Color(18, 65, 112));
+        btnPerfil.setForeground(new java.awt.Color(255, 255, 255));
+        btnPerfil.setText("Perfil");
+        btnPerfil.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnPerfil.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnPerfil.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnPerfil.setRoundBottomLeft(30);
+        btnPerfil.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnPerfilActionPerformed(evt);
+            }
+        });
+        menu.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 200, 40));
 
         buttonRound5.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound5.setForeground(new java.awt.Color(255, 255, 255));
@@ -103,27 +138,34 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         buttonRound5.setVerifyInputWhenFocusTarget(false);
         menu.add(buttonRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 870, 180, 40));
 
-        buttonRound6.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound6.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound6.setText("Productos");
-        buttonRound6.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound6.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound6.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        buttonRound6.setPreferredSize(new java.awt.Dimension(240, 23));
-        buttonRound6.addActionListener(new java.awt.event.ActionListener() {
+        btnProductos.setBackground(new java.awt.Color(18, 65, 112));
+        btnProductos.setForeground(new java.awt.Color(255, 255, 255));
+        btnProductos.setText("Productos");
+        btnProductos.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnProductos.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnProductos.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnProductos.setPreferredSize(new java.awt.Dimension(240, 23));
+        btnProductos.setRoundBottomLeft(30);
+        btnProductos.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound6ActionPerformed(evt);
+                btnProductosActionPerformed(evt);
             }
         });
-        menu.add(buttonRound6, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 180, 40));
+        menu.add(btnProductos, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 230, 200, 40));
 
-        buttonRound7.setBackground(new java.awt.Color(18, 65, 112));
-        buttonRound7.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound7.setText("Metricas");
-        buttonRound7.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
-        buttonRound7.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
-        buttonRound7.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
-        menu.add(buttonRound7, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 180, 40));
+        btnMetricas.setBackground(new java.awt.Color(18, 65, 112));
+        btnMetricas.setForeground(new java.awt.Color(255, 255, 255));
+        btnMetricas.setText("Metricas");
+        btnMetricas.setFont(new java.awt.Font("Noto Sans Kannada", 1, 18)); // NOI18N
+        btnMetricas.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
+        btnMetricas.setHorizontalTextPosition(javax.swing.SwingConstants.RIGHT);
+        btnMetricas.setRoundBottomLeft(30);
+        btnMetricas.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                btnMetricasActionPerformed(evt);
+            }
+        });
+        menu.add(btnMetricas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 200, 40));
 
         jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
 
@@ -156,7 +198,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         pack();
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+    private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
         // TODO add your handling code here:
         PedidosEmprendedor Pe = new PedidosEmprendedor();
         Pe.setSize(1549, 930);
@@ -166,9 +208,31 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         PanelContenedor.add(Pe, BorderLayout.CENTER);
         PanelContenedor.revalidate();
         PanelContenedor.repaint();
-    }//GEN-LAST:event_buttonRound2ActionPerformed
+        
+        
+        btnPedidos.setBackground(Color.white);
+        btnPedidos.setForeground(Color.black);
+        
+            
+        
+    }//GEN-LAST:event_btnPedidosActionPerformed
 
-    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
+    private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
+        // TODO add your handling code here:
+        DashboardE De = new DashboardE();
+        De.setSize(1549, 930);
+        De.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(De, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+        
+        btnHome.setBackground(Color.white);
+        btnHome.setForeground(Color.black);
+    }//GEN-LAST:event_btnHomeActionPerformed
+
+    private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
         // TODO add your handling code here:
         ProductosEmprendedor ProE = new ProductosEmprendedor();
         ProE.setSize(1549, 930);
@@ -178,56 +242,83 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         PanelContenedor.add(ProE, BorderLayout.CENTER);
         PanelContenedor.revalidate();
         PanelContenedor.repaint();
-    }//GEN-LAST:event_buttonRound1ActionPerformed
+        
+        btnProductos.setBackground(Color.white);
+        btnProductos.setForeground(Color.black);
+    }//GEN-LAST:event_btnProductosActionPerformed
 
-    private void buttonRound6ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound6ActionPerformed
+    private void btnFinanzasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinanzasActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonRound6ActionPerformed
+        
+        btnFinanzas.setBackground(Color.white);
+        btnFinanzas.setForeground(Color.black);
+        
+        
+        
+        
+        
+       
+    }//GEN-LAST:event_btnFinanzasActionPerformed
+
+    private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
+        // TODO add your handling code here:
+        
+        btnPerfil.setBackground(Color.white);
+        btnPerfil.setForeground(Color.black);
+    }//GEN-LAST:event_btnPerfilActionPerformed
+
+    private void btnMetricasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMetricasActionPerformed
+        // TODO add your handling code here:
+        
+        btnMetricas.setBackground(Color.white);
+        btnMetricas.setForeground(Color.black);
+        
+    }//GEN-LAST:event_btnMetricasActionPerformed
 
     /**
      * @param args the command line arguments
      */
-    public static void main(String args[]) {
-        /* Set the Nimbus look and feel */
-        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
-        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
-         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
-         */
-        try {
-            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
-                if ("Nimbus".equals(info.getName())) {
-                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
-                    break;
-                }
-            }
-        } catch (ClassNotFoundException ex) {
-            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (InstantiationException ex) {
-            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (IllegalAccessException ex) {
-            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
-            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
-        }
-        //</editor-fold>
-
-        /* Create and display the form */
-        java.awt.EventQueue.invokeLater(new Runnable() {
-            public void run() {
-                new DashboardEmprendedor().setVisible(true);
-            }
-        });
-    }
+//    public static void main(String args[]) {
+//        /* Set the Nimbus look and feel */
+//        //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
+//        /* If Nimbus (introduced in Java SE 6) is not available, stay with the default look and feel.
+//         * For details see http://download.oracle.com/javase/tutorial/uiswing/lookandfeel/plaf.html 
+//         */
+//        try {
+//            for (javax.swing.UIManager.LookAndFeelInfo info : javax.swing.UIManager.getInstalledLookAndFeels()) {
+//                if ("Nimbus".equals(info.getName())) {
+//                    javax.swing.UIManager.setLookAndFeel(info.getClassName());
+//                    break;
+//                }
+//            }
+//        } catch (ClassNotFoundException ex) {
+//            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (InstantiationException ex) {
+//            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (IllegalAccessException ex) {
+//            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        } catch (javax.swing.UnsupportedLookAndFeelException ex) {
+//            java.util.logging.Logger.getLogger(DashboardEmprendedor.class.getName()).log(java.util.logging.Level.SEVERE, null, ex);
+//        }
+//        //</editor-fold>
+//
+//        /* Create and display the form */
+//        java.awt.EventQueue.invokeLater(new Runnable() {
+//            public void run() {
+//                new DashboardEmprendedor().setVisible(true);
+//            }
+//        });
+//    }
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private javax.swing.JPanel PanelContenedor;
-    private RoundersComponents.ButtonRound buttonRound1;
-    private RoundersComponents.ButtonRound buttonRound2;
-    private RoundersComponents.ButtonRound buttonRound3;
-    private RoundersComponents.ButtonRound buttonRound4;
+    private RoundersComponents.ButtonRound btnFinanzas;
+    private RoundersComponents.ButtonRound btnHome;
+    private RoundersComponents.ButtonRound btnMetricas;
+    private RoundersComponents.ButtonRound btnPedidos;
+    private RoundersComponents.ButtonRound btnPerfil;
+    private RoundersComponents.ButtonRound btnProductos;
     private RoundersComponents.ButtonRound buttonRound5;
-    private RoundersComponents.ButtonRound buttonRound6;
-    private RoundersComponents.ButtonRound buttonRound7;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
     // End of variables declaration//GEN-END:variables

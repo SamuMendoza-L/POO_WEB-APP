@@ -165,144 +165,6 @@
             </Constraint>
           </Constraints>
         </Component>
-        <Container class="javax.swing.JPanel" name="jPanel3">
-          <Properties>
-            <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-              <Color blue="ff" green="ff" red="ff" type="rgb"/>
-            </Property>
-          </Properties>
-          <Constraints>
-            <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout" value="org.netbeans.modules.form.compat2.layouts.DesignAbsoluteLayout$AbsoluteConstraintsDescription">
-              <AbsoluteConstraints x="350" y="0" width="1200" height="100"/>
-            </Constraint>
-          </Constraints>
-
-          <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-          <SubComponents>
-            <Container class="RoundersComponents.PanelRound" name="panelRound2">
-              <Properties>
-                <Property name="roundBottomLeft" type="int" value="250"/>
-                <Property name="roundBottomRight" type="int" value="250"/>
-                <Property name="roundTopLeft" type="int" value="250"/>
-                <Property name="roundTopRight" type="int" value="250"/>
-              </Properties>
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="After"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout>
-                <DimensionLayout dim="0">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-                <DimensionLayout dim="1">
-                  <Group type="103" groupAlignment="0" attributes="0">
-                      <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
-                  </Group>
-                </DimensionLayout>
-              </Layout>
-            </Container>
-            <Container class="javax.swing.JPanel" name="jPanel4">
-              <Constraints>
-                <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                  <BorderConstraints direction="Center"/>
-                </Constraint>
-              </Constraints>
-
-              <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-              <SubComponents>
-                <Container class="RoundersComponents.PanelRound" name="panelRound3">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                    <Property name="preferredSize" type="java.awt.Dimension" editor="org.netbeans.beaninfo.editors.DimensionEditor">
-                      <Dimension value="[50, 100]"/>
-                    </Property>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="After"/>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout>
-                    <DimensionLayout dim="0">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="50" max="32767" attributes="0"/>
-                      </Group>
-                    </DimensionLayout>
-                    <DimensionLayout dim="1">
-                      <Group type="103" groupAlignment="0" attributes="0">
-                          <EmptySpace min="0" pref="100" max="32767" attributes="0"/>
-                      </Group>
-                    </DimensionLayout>
-                  </Layout>
-                </Container>
-                <Container class="javax.swing.JPanel" name="jPanel5">
-                  <Properties>
-                    <Property name="background" type="java.awt.Color" editor="org.netbeans.beaninfo.editors.ColorEditor">
-                      <Color blue="ff" green="ff" red="ff" type="rgb"/>
-                    </Property>
-                  </Properties>
-                  <Constraints>
-                    <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                      <BorderConstraints direction="Center"/>
-                    </Constraint>
-                  </Constraints>
-
-                  <Layout class="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout"/>
-                  <SubComponents>
-                    <Container class="RoundersComponents.PanelRound" name="panelRound4">
-                      <Properties>
-                        <Property name="roundBottomLeft" type="int" value="250"/>
-                        <Property name="roundBottomRight" type="int" value="250"/>
-                        <Property name="roundTopLeft" type="int" value="250"/>
-                        <Property name="roundTopRight" type="int" value="250"/>
-                      </Properties>
-                      <Constraints>
-                        <Constraint layoutClass="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout" value="org.netbeans.modules.form.compat2.layouts.DesignBorderLayout$BorderConstraintsDescription">
-                          <BorderConstraints direction="After"/>
-                        </Constraint>
-                      </Constraints>
-
-                      <Layout>
-                        <DimensionLayout dim="0">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="1" attributes="0">
-                                  <EmptySpace max="32767" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace min="-2" pref="28" max="-2" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                        <DimensionLayout dim="1">
-                          <Group type="103" groupAlignment="0" attributes="0">
-                              <Group type="102" alignment="0" attributes="0">
-                                  <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
-                                  <Component id="jLabel3" min="-2" max="-2" attributes="0"/>
-                                  <EmptySpace max="32767" attributes="0"/>
-                              </Group>
-                          </Group>
-                        </DimensionLayout>
-                      </Layout>
-                      <SubComponents>
-                        <Component class="javax.swing.JLabel" name="jLabel3">
-                          <Properties>
-                            <Property name="text" type="java.lang.String" value="jLabel3"/>
-                          </Properties>
-                        </Component>
-                      </SubComponents>
-                    </Container>
-                  </SubComponents>
-                </Container>
-              </SubComponents>
-            </Container>
-          </SubComponents>
-        </Container>
       </SubComponents>
     </Container>
     <Container class="javax.swing.JPanel" name="jPanel1">
@@ -458,9 +320,9 @@
                               <Component id="jLabel8" min="-2" max="-2" attributes="0"/>
                               <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
                               <Component id="jLabel9" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="59" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="103" max="-2" attributes="0"/>
                               <Component id="jLabel10" min="-2" max="-2" attributes="0"/>
-                              <EmptySpace min="-2" pref="84" max="-2" attributes="0"/>
+                              <EmptySpace min="-2" pref="40" max="-2" attributes="0"/>
                           </Group>
                       </Group>
                     </DimensionLayout>
@@ -631,11 +493,11 @@
                                       <Component id="jLabel13" min="-2" max="-2" attributes="0"/>
                                       <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
                                       <Component id="jLabel14" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="72" max="-2" attributes="0"/>
+                                      <EmptySpace min="-2" pref="63" max="-2" attributes="0"/>
                                       <Component id="jComboBox1" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace min="-2" pref="39" max="-2" attributes="0"/>
+                                      <EmptySpace pref="68" max="32767" attributes="0"/>
                                       <Component id="jLabel15" min="-2" max="-2" attributes="0"/>
-                                      <EmptySpace pref="74" max="32767" attributes="0"/>
+                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                   </Group>
                               </Group>
                             </DimensionLayout>
@@ -717,10 +579,10 @@
                               <Properties>
                                 <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
                                   <StringArray count="4">
-                                    <StringItem index="0" value="Item 1"/>
-                                    <StringItem index="1" value="Item 2"/>
-                                    <StringItem index="2" value="Item 3"/>
-                                    <StringItem index="3" value="Item 4"/>
+                                    <StringItem index="0" value="Pendiente"/>
+                                    <StringItem index="1" value="Entregado"/>
+                                    <StringItem index="2" value="Cancelado"/>
+                                    <StringItem index="3" value=" "/>
                                   </StringArray>
                                 </Property>
                               </Properties>
@@ -822,16 +684,18 @@
                                               <Component id="jLabel19" min="-2" max="-2" attributes="0"/>
                                               <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
                                               <Component id="jLabel20" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace min="183" pref="183" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                              <Component id="jComboBox2" min="-2" max="-2" attributes="0"/>
+                                              <EmptySpace pref="64" max="32767" attributes="0"/>
                                               <Component id="jLabel21" min="-2" max="-2" attributes="0"/>
-                                              <EmptySpace pref="75" max="32767" attributes="0"/>
+                                              <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                           </Group>
                                       </Group>
                                     </DimensionLayout>
                                     <DimensionLayout dim="1">
                                       <Group type="103" groupAlignment="0" attributes="0">
                                           <Group type="102" alignment="0" attributes="0">
-                                              <EmptySpace min="-2" pref="37" max="-2" attributes="0"/>
+                                              <EmptySpace min="-2" pref="33" max="-2" attributes="0"/>
                                               <Group type="103" groupAlignment="3" attributes="0">
                                                   <Component id="jLabel16" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel17" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -839,6 +703,7 @@
                                                   <Component id="jLabel19" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel20" alignment="3" min="-2" max="-2" attributes="0"/>
                                                   <Component id="jLabel21" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                  <Component id="jComboBox2" alignment="3" min="-2" max="-2" attributes="0"/>
                                               </Group>
                                               <EmptySpace pref="43" max="32767" attributes="0"/>
                                           </Group>
@@ -911,6 +776,21 @@
                                         </Property>
                                         <Property name="text" type="java.lang.String" value="Combo 2 - Menu"/>
                                       </Properties>
+                                    </Component>
+                                    <Component class="javax.swing.JComboBox" name="jComboBox2">
+                                      <Properties>
+                                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                          <StringArray count="4">
+                                            <StringItem index="0" value="Pendiente"/>
+                                            <StringItem index="1" value="Entregado"/>
+                                            <StringItem index="2" value="Cancelado"/>
+                                            <StringItem index="3" value=" "/>
+                                          </StringArray>
+                                        </Property>
+                                      </Properties>
+                                      <AuxValues>
+                                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                      </AuxValues>
                                     </Component>
                                   </SubComponents>
                                 </Container>
@@ -995,16 +875,18 @@
                                                       <Component id="jLabel24" min="-2" max="-2" attributes="0"/>
                                                       <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
                                                       <Component id="jLabel22" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace min="183" pref="183" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                                      <Component id="jComboBox3" min="-2" max="-2" attributes="0"/>
+                                                      <EmptySpace pref="64" max="32767" attributes="0"/>
                                                       <Component id="jLabel25" min="-2" max="-2" attributes="0"/>
-                                                      <EmptySpace pref="75" max="32767" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="29" max="-2" attributes="0"/>
                                                   </Group>
                                               </Group>
                                             </DimensionLayout>
                                             <DimensionLayout dim="1">
                                               <Group type="103" groupAlignment="0" attributes="0">
                                                   <Group type="102" alignment="0" attributes="0">
-                                                      <EmptySpace min="-2" pref="36" max="-2" attributes="0"/>
+                                                      <EmptySpace min="-2" pref="32" max="-2" attributes="0"/>
                                                       <Group type="103" groupAlignment="3" attributes="0">
                                                           <Component id="jLabel26" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jLabel23" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1012,6 +894,7 @@
                                                           <Component id="jLabel24" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jLabel22" alignment="3" min="-2" max="-2" attributes="0"/>
                                                           <Component id="jLabel25" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                          <Component id="jComboBox3" alignment="3" min="-2" max="-2" attributes="0"/>
                                                       </Group>
                                                       <EmptySpace pref="44" max="32767" attributes="0"/>
                                                   </Group>
@@ -1084,6 +967,21 @@
                                                 </Property>
                                                 <Property name="text" type="java.lang.String" value="#7823"/>
                                               </Properties>
+                                            </Component>
+                                            <Component class="javax.swing.JComboBox" name="jComboBox3">
+                                              <Properties>
+                                                <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                                  <StringArray count="4">
+                                                    <StringItem index="0" value="Pendiente"/>
+                                                    <StringItem index="1" value="Entregado"/>
+                                                    <StringItem index="2" value="Cancelado"/>
+                                                    <StringItem index="3" value=" "/>
+                                                  </StringArray>
+                                                </Property>
+                                              </Properties>
+                                              <AuxValues>
+                                                <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                              </AuxValues>
                                             </Component>
                                           </SubComponents>
                                         </Container>
@@ -1173,16 +1071,18 @@
                                                               <Component id="jLabel30" min="-2" max="-2" attributes="0"/>
                                                               <EmptySpace min="-2" pref="140" max="-2" attributes="0"/>
                                                               <Component id="jLabel28" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace min="183" pref="183" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="68" max="-2" attributes="0"/>
+                                                              <Component id="jComboBox4" min="-2" max="-2" attributes="0"/>
+                                                              <EmptySpace pref="65" max="32767" attributes="0"/>
                                                               <Component id="jLabel31" min="-2" max="-2" attributes="0"/>
-                                                              <EmptySpace pref="74" max="32767" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="27" max="-2" attributes="0"/>
                                                           </Group>
                                                       </Group>
                                                     </DimensionLayout>
                                                     <DimensionLayout dim="1">
                                                       <Group type="103" groupAlignment="0" attributes="0">
                                                           <Group type="102" alignment="0" attributes="0">
-                                                              <EmptySpace min="-2" pref="34" max="-2" attributes="0"/>
+                                                              <EmptySpace min="-2" pref="30" max="-2" attributes="0"/>
                                                               <Group type="103" groupAlignment="3" attributes="0">
                                                                   <Component id="jLabel32" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jLabel29" alignment="3" min="-2" max="-2" attributes="0"/>
@@ -1190,6 +1090,7 @@
                                                                   <Component id="jLabel30" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jLabel28" alignment="3" min="-2" max="-2" attributes="0"/>
                                                                   <Component id="jLabel31" alignment="3" min="-2" max="-2" attributes="0"/>
+                                                                  <Component id="jComboBox4" alignment="3" min="-2" max="-2" attributes="0"/>
                                                               </Group>
                                                               <EmptySpace pref="46" max="32767" attributes="0"/>
                                                           </Group>
@@ -1262,6 +1163,21 @@
                                                         </Property>
                                                         <Property name="text" type="java.lang.String" value="#7823"/>
                                                       </Properties>
+                                                    </Component>
+                                                    <Component class="javax.swing.JComboBox" name="jComboBox4">
+                                                      <Properties>
+                                                        <Property name="model" type="javax.swing.ComboBoxModel" editor="org.netbeans.modules.form.editors2.ComboBoxModelEditor">
+                                                          <StringArray count="4">
+                                                            <StringItem index="0" value="Pendiente"/>
+                                                            <StringItem index="1" value="Entregado"/>
+                                                            <StringItem index="2" value="Cancelado"/>
+                                                            <StringItem index="3" value=" "/>
+                                                          </StringArray>
+                                                        </Property>
+                                                      </Properties>
+                                                      <AuxValues>
+                                                        <AuxValue name="JavaCodeGenerator_TypeParameters" type="java.lang.String" value="&lt;String&gt;"/>
+                                                      </AuxValues>
                                                     </Component>
                                                   </SubComponents>
                                                 </Container>

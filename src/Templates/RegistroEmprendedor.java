@@ -7,6 +7,7 @@ package Templates;
 import javax.swing.JOptionPane;
 import models.Usuario;
 import models.Emprendedor;
+import Estructuras.Lista;
 
 /**
  *
@@ -227,6 +228,7 @@ public class RegistroEmprendedor extends javax.swing.JFrame {
         String NombreNegocio = txtNombreNegocio.getText();
         String Carrera = txtCarreraEmprendedor.getText();
         String TipoN = (String) CbxTipoNegocio.getSelectedItem();
+        
         
         Emprendedor u = new Emprendedor(Nombre, Apellido, Tel,Correo, Contraseña, Carrera, NombreNegocio, TipoN);
         models.Main.GetListaUsuarios().AdicionarFinal(u);

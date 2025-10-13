@@ -7,12 +7,14 @@ public class Emprendedor extends Usuario{
     private String Carrera;
     private String NombreNegocio;
     private String TipoNegocio;
+    private Lista Productos;
     
     public Emprendedor(String name, String last_name, String Tell, String email, String password, String Carrera, String NombreNegocio, String TipoNegocio){
         super(name, last_name, Tell, email, password, "Emprendedor");
         this.Carrera = Carrera;
         this.NombreNegocio = NombreNegocio;
         this.TipoNegocio = TipoNegocio;
+        this.Productos = new Lista();
         
     }
 
@@ -39,6 +41,16 @@ public class Emprendedor extends Usuario{
     public void setTipoNegocio(String TipoNegocio) {
         this.TipoNegocio = TipoNegocio;
     }
+
+    public Lista getProductos() {
+        return Productos;
+    }
+
+    public void setProductos(Lista Productos) {
+        this.Productos = Productos;
+    }
+    
+    
 
     @Override
     public String toString() {

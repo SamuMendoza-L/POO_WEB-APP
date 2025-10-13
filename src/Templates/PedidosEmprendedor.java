@@ -22,10 +22,7 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         initComponents();
     }
     
-    public static void main(String[] args) {
-        
-        
-    }
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -42,13 +39,6 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         btnPedidosEntregados = new RoundersComponents.ButtonRound();
         btnPedidosPendientes = new RoundersComponents.ButtonRound();
         btnPedidosCancelados = new RoundersComponents.ButtonRound();
-        jPanel3 = new javax.swing.JPanel();
-        panelRound2 = new RoundersComponents.PanelRound();
-        jPanel4 = new javax.swing.JPanel();
-        panelRound3 = new RoundersComponents.PanelRound();
-        jPanel5 = new javax.swing.JPanel();
-        panelRound4 = new RoundersComponents.PanelRound();
-        jLabel3 = new javax.swing.JLabel();
         jPanel1 = new javax.swing.JPanel();
         jPanel2 = new javax.swing.JPanel();
         jPanel6 = new javax.swing.JPanel();
@@ -84,6 +74,7 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel21 = new javax.swing.JLabel();
         jLabel16 = new javax.swing.JLabel();
         jLabel18 = new javax.swing.JLabel();
+        jComboBox2 = new javax.swing.JComboBox<>();
         jPanel16 = new javax.swing.JPanel();
         jPanel17 = new javax.swing.JPanel();
         jPanel18 = new javax.swing.JPanel();
@@ -94,6 +85,7 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel23 = new javax.swing.JLabel();
         jLabel24 = new javax.swing.JLabel();
         jLabel26 = new javax.swing.JLabel();
+        jComboBox3 = new javax.swing.JComboBox<>();
         jPanel19 = new javax.swing.JPanel();
         jPanel20 = new javax.swing.JPanel();
         jPanel21 = new javax.swing.JPanel();
@@ -104,6 +96,7 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel30 = new javax.swing.JLabel();
         jLabel33 = new javax.swing.JLabel();
         jLabel32 = new javax.swing.JLabel();
+        jComboBox4 = new javax.swing.JComboBox<>();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1549, 930));
@@ -173,80 +166,6 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         btnPedidosCancelados.setRoundTopLeft(20);
         btnPedidosCancelados.setRoundTopRight(20);
         panelRound1.add(btnPedidosCancelados, new org.netbeans.lib.awtextra.AbsoluteConstraints(1100, 150, 200, 35));
-
-        jPanel3.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel3.setLayout(new java.awt.BorderLayout());
-
-        panelRound2.setRoundBottomLeft(250);
-        panelRound2.setRoundBottomRight(250);
-        panelRound2.setRoundTopLeft(250);
-        panelRound2.setRoundTopRight(250);
-
-        javax.swing.GroupLayout panelRound2Layout = new javax.swing.GroupLayout(panelRound2);
-        panelRound2.setLayout(panelRound2Layout);
-        panelRound2Layout.setHorizontalGroup(
-            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-        panelRound2Layout.setVerticalGroup(
-            panelRound2Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jPanel3.add(panelRound2, java.awt.BorderLayout.LINE_END);
-
-        jPanel4.setLayout(new java.awt.BorderLayout());
-
-        panelRound3.setBackground(new java.awt.Color(255, 255, 255));
-        panelRound3.setPreferredSize(new java.awt.Dimension(50, 100));
-
-        javax.swing.GroupLayout panelRound3Layout = new javax.swing.GroupLayout(panelRound3);
-        panelRound3.setLayout(panelRound3Layout);
-        panelRound3Layout.setHorizontalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 50, Short.MAX_VALUE)
-        );
-        panelRound3Layout.setVerticalGroup(
-            panelRound3Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGap(0, 100, Short.MAX_VALUE)
-        );
-
-        jPanel4.add(panelRound3, java.awt.BorderLayout.LINE_END);
-
-        jPanel5.setBackground(new java.awt.Color(255, 255, 255));
-        jPanel5.setLayout(new java.awt.BorderLayout());
-
-        panelRound4.setRoundBottomLeft(250);
-        panelRound4.setRoundBottomRight(250);
-        panelRound4.setRoundTopLeft(250);
-        panelRound4.setRoundTopRight(250);
-
-        jLabel3.setText("jLabel3");
-
-        javax.swing.GroupLayout panelRound4Layout = new javax.swing.GroupLayout(panelRound4);
-        panelRound4.setLayout(panelRound4Layout);
-        panelRound4Layout.setHorizontalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, panelRound4Layout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                .addComponent(jLabel3)
-                .addGap(28, 28, 28))
-        );
-        panelRound4Layout.setVerticalGroup(
-            panelRound4Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addGroup(panelRound4Layout.createSequentialGroup()
-                .addGap(39, 39, 39)
-                .addComponent(jLabel3)
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
-        );
-
-        jPanel5.add(panelRound4, java.awt.BorderLayout.LINE_END);
-
-        jPanel4.add(jPanel5, java.awt.BorderLayout.CENTER);
-
-        jPanel3.add(jPanel4, java.awt.BorderLayout.CENTER);
-
-        panelRound1.add(jPanel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(350, 0, 1200, 100));
 
         add(panelRound1, java.awt.BorderLayout.PAGE_START);
 
@@ -350,9 +269,9 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
                 .addComponent(jLabel8)
                 .addGap(84, 84, 84)
                 .addComponent(jLabel9)
-                .addGap(59, 59, 59)
+                .addGap(103, 103, 103)
                 .addComponent(jLabel10)
-                .addGap(84, 84, 84))
+                .addGap(40, 40, 40))
         );
         panelRound5Layout.setVerticalGroup(
             panelRound5Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -423,7 +342,7 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel14.setForeground(new java.awt.Color(255, 255, 255));
         jLabel14.setText("313-7711");
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Item 1", "Item 2", "Item 3", "Item 4" }));
+        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado", " " }));
 
         jLabel15.setFont(new java.awt.Font("Noto Sans Kannada", 1, 14)); // NOI18N
         jLabel15.setForeground(new java.awt.Color(255, 255, 255));
@@ -444,11 +363,11 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
                 .addComponent(jLabel13)
                 .addGap(140, 140, 140)
                 .addComponent(jLabel14)
-                .addGap(72, 72, 72)
+                .addGap(63, 63, 63)
                 .addComponent(jComboBox1, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(39, 39, 39)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 68, Short.MAX_VALUE)
                 .addComponent(jLabel15)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         panelRound6Layout.setVerticalGroup(
             panelRound6Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -518,6 +437,8 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel18.setForeground(new java.awt.Color(255, 255, 255));
         jLabel18.setText("Combo 2 - Menu");
 
+        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado", " " }));
+
         javax.swing.GroupLayout panelRound7Layout = new javax.swing.GroupLayout(panelRound7);
         panelRound7.setLayout(panelRound7Layout);
         panelRound7Layout.setHorizontalGroup(
@@ -533,21 +454,24 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
                 .addComponent(jLabel19)
                 .addGap(140, 140, 140)
                 .addComponent(jLabel20)
-                .addGap(183, 183, 183)
+                .addGap(68, 68, 68)
+                .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jLabel21)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         panelRound7Layout.setVerticalGroup(
             panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound7Layout.createSequentialGroup()
-                .addGap(37, 37, 37)
+                .addGap(33, 33, 33)
                 .addGroup(panelRound7Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel16)
                     .addComponent(jLabel17)
                     .addComponent(jLabel18)
                     .addComponent(jLabel19)
                     .addComponent(jLabel20)
-                    .addComponent(jLabel21))
+                    .addComponent(jLabel21)
+                    .addComponent(jComboBox2, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(43, Short.MAX_VALUE))
         );
 
@@ -604,6 +528,8 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel26.setForeground(new java.awt.Color(255, 255, 255));
         jLabel26.setText("#7823");
 
+        jComboBox3.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado", " " }));
+
         javax.swing.GroupLayout panelRound8Layout = new javax.swing.GroupLayout(panelRound8);
         panelRound8.setLayout(panelRound8Layout);
         panelRound8Layout.setHorizontalGroup(
@@ -619,21 +545,24 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
                 .addComponent(jLabel24)
                 .addGap(140, 140, 140)
                 .addComponent(jLabel22)
-                .addGap(183, 183, 183)
+                .addGap(68, 68, 68)
+                .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 64, Short.MAX_VALUE)
                 .addComponent(jLabel25)
-                .addContainerGap(75, Short.MAX_VALUE))
+                .addGap(29, 29, 29))
         );
         panelRound8Layout.setVerticalGroup(
             panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound8Layout.createSequentialGroup()
-                .addGap(36, 36, 36)
+                .addGap(32, 32, 32)
                 .addGroup(panelRound8Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel26)
                     .addComponent(jLabel23)
                     .addComponent(jLabel27)
                     .addComponent(jLabel24)
                     .addComponent(jLabel22)
-                    .addComponent(jLabel25))
+                    .addComponent(jLabel25)
+                    .addComponent(jComboBox3, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(44, Short.MAX_VALUE))
         );
 
@@ -691,6 +620,8 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         jLabel32.setForeground(new java.awt.Color(255, 255, 255));
         jLabel32.setText("#7823");
 
+        jComboBox4.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Pendiente", "Entregado", "Cancelado", " " }));
+
         javax.swing.GroupLayout panelRound9Layout = new javax.swing.GroupLayout(panelRound9);
         panelRound9.setLayout(panelRound9Layout);
         panelRound9Layout.setHorizontalGroup(
@@ -706,21 +637,24 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
                 .addComponent(jLabel30)
                 .addGap(140, 140, 140)
                 .addComponent(jLabel28)
-                .addGap(183, 183, 183)
+                .addGap(68, 68, 68)
+                .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED, 65, Short.MAX_VALUE)
                 .addComponent(jLabel31)
-                .addContainerGap(74, Short.MAX_VALUE))
+                .addGap(27, 27, 27))
         );
         panelRound9Layout.setVerticalGroup(
             panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(panelRound9Layout.createSequentialGroup()
-                .addGap(34, 34, 34)
+                .addGap(30, 30, 30)
                 .addGroup(panelRound9Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.BASELINE)
                     .addComponent(jLabel32)
                     .addComponent(jLabel29)
                     .addComponent(jLabel33)
                     .addComponent(jLabel30)
                     .addComponent(jLabel28)
-                    .addComponent(jLabel31))
+                    .addComponent(jLabel31)
+                    .addComponent(jComboBox4, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE))
                 .addContainerGap(46, Short.MAX_VALUE))
         );
 
@@ -758,13 +692,16 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
         // TODO add your handling code here:
     }//GEN-LAST:event_btnPedidosEntregadosActionPerformed
 
-
+    
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RoundersComponents.ButtonRound btnPedidosCancelados;
     private RoundersComponents.ButtonRound btnPedidosEntregados;
     private RoundersComponents.ButtonRound btnPedidosPendientes;
     private RoundersComponents.ButtonRound btnTodosPedidos;
     private javax.swing.JComboBox<String> jComboBox1;
+    private javax.swing.JComboBox<String> jComboBox2;
+    private javax.swing.JComboBox<String> jComboBox3;
+    private javax.swing.JComboBox<String> jComboBox4;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -787,7 +724,6 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JLabel jLabel27;
     private javax.swing.JLabel jLabel28;
     private javax.swing.JLabel jLabel29;
-    private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel30;
     private javax.swing.JLabel jLabel31;
     private javax.swing.JLabel jLabel32;
@@ -812,17 +748,11 @@ public class PedidosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel2;
     private javax.swing.JPanel jPanel20;
     private javax.swing.JPanel jPanel21;
-    private javax.swing.JPanel jPanel3;
-    private javax.swing.JPanel jPanel4;
-    private javax.swing.JPanel jPanel5;
     private javax.swing.JPanel jPanel6;
     private javax.swing.JPanel jPanel7;
     private javax.swing.JPanel jPanel8;
     private javax.swing.JPanel jPanel9;
     private RoundersComponents.PanelRound panelRound1;
-    private RoundersComponents.PanelRound panelRound2;
-    private RoundersComponents.PanelRound panelRound3;
-    private RoundersComponents.PanelRound panelRound4;
     private RoundersComponents.PanelRound panelRound5;
     private RoundersComponents.PanelRound panelRound6;
     private RoundersComponents.PanelRound panelRound7;

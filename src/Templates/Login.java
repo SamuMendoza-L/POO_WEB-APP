@@ -11,6 +11,10 @@ public class Login extends javax.swing.JFrame {
     public Login() {
         initComponents();
     }
+    
+    
+    
+    
 
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -154,8 +158,11 @@ public class Login extends javax.swing.JFrame {
         
         Main.GetListaUsuarios().BuscarUsuario(email, Pass, this);
         
+        Usuario UserSesion = Main.GetListaUsuarios().BuscarUsuario(email, Pass, this);
     }//GEN-LAST:event_btnIngresarActionPerformed
 
+    
+    
     private void jtfCorreoMouseClicked(java.awt.event.MouseEvent evt) {//GEN-FIRST:event_jtfCorreoMouseClicked
         // TODO add your handling code here:
         jtfCorreo.setText("");
