@@ -57,7 +57,7 @@ public class Lista {
                 loginFrame.dispose();
             }
             else if(usuarioEncontrado.getRole().equals("Emprendedor")){
-                new DashboardEmprendedor().setVisible(true);
+                new DashboardEmprendedor(usuarioEncontrado).setVisible(true);
                 loginFrame.dispose();
             }
             

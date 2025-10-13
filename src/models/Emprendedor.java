@@ -7,6 +7,8 @@ public class Emprendedor extends Usuario{
     private String Carrera;
     private String NombreNegocio;
     private String TipoNegocio;
+    private int Ingresos;
+    private int Egresos;
     private Lista Productos;
     
     public Emprendedor(String name, String last_name, String Tell, String email, String password, String Carrera, String NombreNegocio, String TipoNegocio){
@@ -14,6 +16,8 @@ public class Emprendedor extends Usuario{
         this.Carrera = Carrera;
         this.NombreNegocio = NombreNegocio;
         this.TipoNegocio = TipoNegocio;
+        this.Ingresos = 0;
+        this.Egresos = 0;
         this.Productos = new Lista();
         
     }
@@ -49,6 +53,24 @@ public class Emprendedor extends Usuario{
     public void setProductos(Lista Productos) {
         this.Productos = Productos;
     }
+
+    public int getIngresos() {
+        return Ingresos;
+    }
+
+    public void setIngresos(int Ingresos) {
+        this.Ingresos = Ingresos;
+    }
+
+    public int getEgresos() {
+        return Egresos;
+    }
+
+    public void setEgresos(int Egresos) {
+        this.Egresos = Egresos;
+    }
+    
+    
     
     
 

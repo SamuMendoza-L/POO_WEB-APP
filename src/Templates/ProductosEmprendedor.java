@@ -185,7 +185,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         ));
         jScrollPane1.setViewportView(jTable1);
 
-        jPanel9.add(jScrollPane1, java.awt.BorderLayout.PAGE_START);
+        jPanel9.add(jScrollPane1, java.awt.BorderLayout.CENTER);
 
         jPanel8.add(jPanel9, java.awt.BorderLayout.LINE_START);
 

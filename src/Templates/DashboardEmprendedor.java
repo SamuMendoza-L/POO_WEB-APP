@@ -31,7 +31,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         JOptionPane.showMessageDialog(null, "Acabas de iniciar sesion a nombre de: " + emprendedor.getName());
         
         PanelContenedor.setLayout(new BorderLayout());
-        DashboardE De = new DashboardE();
+        DashboardE De = new DashboardE(usuario);
         De.setSize(1549, 930);
         De.setLocation(0, 0);
         
@@ -43,6 +43,27 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         
         
     }
+    
+    private void resetButtons() {
+    // Restaurar todos los botones al color original
+    btnHome.setBackground(new Color(18, 65, 112));
+    btnHome.setForeground(Color.white);
+    
+    btnPedidos.setBackground(new Color(18, 65, 112));
+    btnPedidos.setForeground(Color.white);
+    
+    btnProductos.setBackground(new Color(18, 65, 112));
+    btnProductos.setForeground(Color.white);
+    
+    btnFinanzas.setBackground(new Color(18, 65, 112));
+    btnFinanzas.setForeground(Color.white);
+    
+    btnPerfil.setBackground(new Color(18, 65, 112));
+    btnPerfil.setForeground(Color.white);
+    
+    btnMetricas.setBackground(new Color(18, 65, 112));
+    btnMetricas.setForeground(Color.white);
+}
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,6 +83,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         buttonRound5 = new RoundersComponents.ButtonRound();
         btnProductos = new RoundersComponents.ButtonRound();
         btnMetricas = new RoundersComponents.ButtonRound();
+        jLabel2 = new javax.swing.JLabel();
         PanelContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -167,6 +189,9 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         });
         menu.add(btnMetricas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 200, 40));
 
+        jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/IconoFrameApp-small.png"))); // NOI18N
+        menu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
+
         jPanel1.add(menu, java.awt.BorderLayout.LINE_START);
 
         PanelContenedor.setBackground(new java.awt.Color(255, 255, 255));
@@ -200,6 +225,8 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnPedidosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPedidosActionPerformed
         // TODO add your handling code here:
+        resetButtons();
+        
         PedidosEmprendedor Pe = new PedidosEmprendedor();
         Pe.setSize(1549, 930);
         Pe.setLocation(0, 0);
@@ -219,7 +246,9 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnHomeActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnHomeActionPerformed
         // TODO add your handling code here:
-        DashboardE De = new DashboardE();
+        resetButtons();
+        
+        DashboardE De = new DashboardE(emprendedor);
         De.setSize(1549, 930);
         De.setLocation(0, 0);
         
@@ -234,6 +263,8 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnProductosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnProductosActionPerformed
         // TODO add your handling code here:
+        resetButtons();
+        
         ProductosEmprendedor ProE = new ProductosEmprendedor();
         ProE.setSize(1549, 930);
         ProE.setLocation(0, 0);
@@ -249,6 +280,9 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnFinanzasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnFinanzasActionPerformed
         // TODO add your handling code here:
+        resetButtons();
+        
+        
         
         btnFinanzas.setBackground(Color.white);
         btnFinanzas.setForeground(Color.black);
@@ -319,6 +353,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     private RoundersComponents.ButtonRound btnPerfil;
     private RoundersComponents.ButtonRound btnProductos;
     private RoundersComponents.ButtonRound buttonRound5;
+    private javax.swing.JLabel jLabel2;
     private javax.swing.JPanel jPanel1;
     private javax.swing.JPanel menu;
     // End of variables declaration//GEN-END:variables
