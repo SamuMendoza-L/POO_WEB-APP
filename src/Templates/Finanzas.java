@@ -12,6 +12,7 @@ import models.IngresosEmprendedor;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
+import javax.swing.JOptionPane;
 
 
 /**
@@ -505,6 +506,8 @@ public class Finanzas extends javax.swing.JPanel {
 
     private void RegistrarIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarIngresoActionPerformed
         // TODO add your handling code here:
+        
+        
         double montoIngreso = Double.parseDouble(jtfMontoIngreso.getText());
         String fechaIngreso = jtfFechaIngreso.getText();
         
@@ -515,9 +518,29 @@ public class Finanzas extends javax.swing.JPanel {
         String descripcionIngreso = jtfDescripcionIngreso.getText();
         String metodoPagoIngreso = (String)jcMetodoPagoIngreso.getSelectedItem();
         
+        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        
         IngresosEmprendedor ingresoE = new IngresosEmprendedor(montoIngreso, fecha, descripcionIngreso, metodoPagoIngreso);
         
         emprendedor.getIngresos().AdicionarFinal(ingresoE);
+        javax.swing.JOptionPane.showMessageDialog(this,
+            """
+            \u2705 Ingreso registrado:
+            Monto: """ + formatoCOP.format(montoIngreso) + "\n" +
+            "Fecha: " + fecha + "\n" +
+            "Método: " + metodoPagoIngreso + "\n" +
+            "Descripción: " + descripcionIngreso
+        );
+        
+        String ingresos = Double.toString(emprendedor.getTotalIngresos());
+        
+        JOptionPane.showMessageDialog(null, "Ingresos acomulados" + ingresos);
+        
+        jtfMontoIngreso.setText("");
+        jtfFechaIngreso.setText("");
+        jtfDescripcionIngreso.setText("");
+        jcMetodoPagoIngreso.setSelectedIndex(0);
+        
         
         
         

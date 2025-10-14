@@ -8,12 +8,14 @@ public class IngresosEmprendedor {
     private LocalDate fecha;
     private String Descripcion;
     private String MetodoPago;
+    
 
     public IngresosEmprendedor(double MontoIngreso, LocalDate fecha, String Descripcion, String MetodoPago) {
         this.MontoIngreso = MontoIngreso;
         this.fecha = fecha;
         this.Descripcion = Descripcion;
         this.MetodoPago = MetodoPago;
+        
     }
 
     public double getMontoIngreso() {
@@ -47,6 +49,10 @@ public class IngresosEmprendedor {
     public void setMetodoPago(String MetodoPago) {
         this.MetodoPago = MetodoPago;
     }
+
+    
+    
+    
 
     @Override
     public String toString() {
