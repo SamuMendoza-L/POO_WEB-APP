@@ -9,6 +9,7 @@ import models.Emprendedor;
 import models.Usuario;
 
 import models.IngresosEmprendedor;
+import models.EgresosEmprendedor;
 
 import java.time.LocalDate;
 import java.time.format.DateTimeFormatter;
@@ -33,12 +34,12 @@ public class Finanzas extends javax.swing.JPanel {
             this.emprendedor = (Emprendedor) u;
         }
         
-        double totalIngresos = emprendedor.getTotalIngresos();
-        double totalEgresos = emprendedor.getTotalEgresos();
-        
-        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
-        lblTotalIngresos.setText(formatoCOP.format(totalIngresos));
-        lblTotalEgresos.setText(formatoCOP.format(totalEgresos));
+//        double totalIngresos = (double)emprendedor.getTotalIngresos();
+//        double totalEgresos = (double)emprendedor.getTotalEgresos();
+//        
+//        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+//        lblTotalIngresos.setText(formatoCOP.format(totalIngresos));
+//        lblTotalEgresos.setText(formatoCOP.format(totalEgresos));
         
         
     }
@@ -91,12 +92,12 @@ public class Finanzas extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
-        jTextField6 = new javax.swing.JTextField();
+        jcMetodoPagoEgreso = new javax.swing.JComboBox<>();
+        jtfMontoEgreso = new javax.swing.JTextField();
         jLabel9 = new javax.swing.JLabel();
-        jTextField4 = new javax.swing.JTextField();
+        jtfDescripcionEgreso = new javax.swing.JTextField();
         jLabel10 = new javax.swing.JLabel();
-        jTextField5 = new javax.swing.JTextField();
+        jtfFechaEgreso = new javax.swing.JTextField();
         panelRound14 = new RoundersComponents.PanelRound();
         jLabel12 = new javax.swing.JLabel();
         lblTotalEgresos = new javax.swing.JLabel();
@@ -446,19 +447,19 @@ public class Finanzas extends javax.swing.JPanel {
         jLabel8.setText("Fecha:");
         panelRound12.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia", " " }));
-        panelRound12.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 310, -1));
-        panelRound12.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 310, -1));
+        jcMetodoPagoEgreso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia", " " }));
+        panelRound12.add(jcMetodoPagoEgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 330, 310, -1));
+        panelRound12.add(jtfMontoEgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 180, 310, -1));
 
         jLabel9.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
         jLabel9.setText("Descripción:");
         panelRound12.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
-        panelRound12.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 310, -1));
+        panelRound12.add(jtfDescripcionEgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 280, 310, -1));
 
         jLabel10.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
         jLabel10.setText("Metodo de Pago:");
         panelRound12.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 330, -1, -1));
-        panelRound12.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 310, -1));
+        panelRound12.add(jtfFechaEgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 230, 310, -1));
 
         panelRound14.setBackground(new java.awt.Color(255, 255, 255));
         panelRound14.setRoundBottomLeft(50);
@@ -480,6 +481,11 @@ public class Finanzas extends javax.swing.JPanel {
         RegistrarEgreso.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarEgreso.setText("REGISTRAR");
         RegistrarEgreso.setRoundBottomLeft(30);
+        RegistrarEgreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarEgresoActionPerformed(evt);
+            }
+        });
         panelRound12.add(RegistrarEgreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 210, 35));
 
         panelRound2.add(panelRound12, java.awt.BorderLayout.CENTER);
@@ -546,18 +552,56 @@ public class Finanzas extends javax.swing.JPanel {
         jcMetodoPagoIngreso.setSelectedIndex(0);
         
         
-        
-        
-        
-        
-        
     }//GEN-LAST:event_RegistrarIngresoActionPerformed
+
+    private void RegistrarEgresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarEgresoActionPerformed
+        // TODO add your handling code here:
+        double montoEgreso = Double.parseDouble(jtfMontoEgreso.getText());
+        String fechaEgreso = jtfFechaEgreso.getText();
+        
+        //Formato para la fecha
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fecha = LocalDate.parse(fechaEgreso, formato);
+        
+        String descripcionEgreso = jtfDescripcionEgreso.getText();
+        String metodoEgreso = (String)jcMetodoPagoEgreso.getSelectedItem();
+        
+        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        
+        EgresosEmprendedor EgreEm = new EgresosEmprendedor(montoEgreso, fecha, descripcionEgreso, metodoEgreso);
+        
+        emprendedor.getEgresos().AdicionarFinal(EgreEm);
+        javax.swing.JOptionPane.showMessageDialog(this,
+            """
+            \u2705 Ingreso registrado:
+            Monto: """ + formatoCOP.format(montoEgreso) + "\n" +
+            "Fecha: " + fecha + "\n" +
+            "Método: " + metodoEgreso + "\n" +
+            "Descripción: " + descripcionEgreso
+        );
+        
+        double EgresosA = emprendedor.getEgresosAcumulados();
+        EgresosA += montoEgreso;
+        
+        emprendedor.setEgresosAcumulados(EgresosA);
+        
+        JOptionPane.showMessageDialog(null, "Egresos acumulados" + EgresosA);
+        
+        jtfMontoEgreso.setText("");
+        jtfFechaEgreso.setText("");
+        jtfDescripcionEgreso.setText("");
+        jcMetodoPagoEgreso.setSelectedIndex(0);
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_RegistrarEgresoActionPerformed
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RoundersComponents.ButtonRound RegistrarEgreso;
     private RoundersComponents.ButtonRound RegistrarIngreso;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -581,12 +625,13 @@ public class Finanzas extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
-    private javax.swing.JTextField jTextField6;
+    private javax.swing.JComboBox<String> jcMetodoPagoEgreso;
     private javax.swing.JComboBox<String> jcMetodoPagoIngreso;
+    private javax.swing.JTextField jtfDescripcionEgreso;
     private javax.swing.JTextField jtfDescripcionIngreso;
+    private javax.swing.JTextField jtfFechaEgreso;
     private javax.swing.JTextField jtfFechaIngreso;
+    private javax.swing.JTextField jtfMontoEgreso;
     private javax.swing.JTextField jtfMontoIngreso;
     private javax.swing.JLabel lblTotalEgresos;
     private javax.swing.JLabel lblTotalIngresos;

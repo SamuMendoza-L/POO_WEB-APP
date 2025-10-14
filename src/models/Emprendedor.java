@@ -13,6 +13,7 @@ public class Emprendedor extends Usuario{
     private Lista Productos;
     private Lista Pedidos;
     private double IngresosAcumulados;
+    private double EgresosAcumulados;
     
     public Emprendedor(String name, String last_name, String Tell, String email, String password, String Carrera, String NombreNegocio, String TipoNegocio){
         super(name, last_name, Tell, email, password, "Emprendedor");
@@ -24,7 +25,7 @@ public class Emprendedor extends Usuario{
         this.Productos = new Lista();
         this.Pedidos = new Lista();
         this.IngresosAcumulados = 0;
-        
+        this.EgresosAcumulados = 0;
     }
 
     public String getCarrera() {
@@ -90,37 +91,40 @@ public class Emprendedor extends Usuario{
     public void setIngresosAcumulados(double IngresosAcumulados) {
         this.IngresosAcumulados = IngresosAcumulados;
     }
-    
-    
-    
-    
-    
-    
-    public double getTotalIngresos() {
-        double total = 0;
-        Nodo aux = Ingresos.getPrimero();
-    
-        while (aux != null) {
-            double valor = (double) aux.getDato(); // o convierte según tu tipo de dato
-            total += valor;
-            aux = aux.getEnlace();
-        }
-    
-        return total;
+
+    public double getEgresosAcumulados() {
+        return EgresosAcumulados;
+    }
+
+    public void setEgresosAcumulados(double EgresosAcumulados) {
+        this.EgresosAcumulados = EgresosAcumulados;
     }
     
-    public double getTotalEgresos() {
-        double total = 0;
-        Nodo aux = Egresos.getPrimero();
-    
-        while (aux != null) {
-            double valor = (double) aux.getDato(); // o convierte según tu tipo de dato
-            total += valor;
-            aux = aux.getEnlace();
-        }
-    
-        return total;
-    }
+//    public double getTotalIngresos() {
+//        double total = 0;
+//        Nodo aux = Ingresos.getPrimero();
+//    
+//        while (aux != null) {
+//            double valor = (double) aux.getDato(); // o convierte según tu tipo de dato
+//            total += valor;
+//            aux = aux.getEnlace();
+//        }
+//    
+//        return total;
+//    }
+//    
+//    public double getTotalEgresos() {
+//        double total = 0;
+//        Nodo aux = Egresos.getPrimero();
+//    
+//        while (aux != null) {
+//            double valor = (double) aux.getDato(); // o convierte según tu tipo de dato
+//            total += valor;
+//            aux = aux.getEnlace();
+//        }
+//    
+//        return total;
+//    }
     
     public int getTotalProductos(){
         int total = 0;
