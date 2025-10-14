@@ -33,12 +33,12 @@ public class DashboardE extends javax.swing.JPanel {
         lblNombreU.setText(emprendedor.getName());
         
         
-        double totalIngresos = emprendedor.getTotalIngresos();
-        double totalEgresos = emprendedor.getTotalEgresos();
-
-        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
-        lblIngresosMensual.setText(formatoCOP.format(totalIngresos));
-        lblEgresosMensuales.setText(formatoCOP.format(totalEgresos));
+//        double totalIngresos = emprendedor.getTotalIngresos();
+//        double totalEgresos = emprendedor.getTotalEgresos();
+//
+//        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+//        lblIngresosMensual.setText(formatoCOP.format(totalIngresos));
+//        lblEgresosMensuales.setText(formatoCOP.format(totalEgresos));
         
         
         int CantidadP = emprendedor.getTotalProductos();
