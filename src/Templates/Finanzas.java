@@ -532,9 +532,13 @@ public class Finanzas extends javax.swing.JPanel {
             "Descripción: " + descripcionIngreso
         );
         
-        String ingresos = Double.toString(emprendedor.getTotalIngresos());
+        double IngresosA = emprendedor.getIngresosAcumulados();
         
-        JOptionPane.showMessageDialog(null, "Ingresos acomulados" + ingresos);
+        IngresosA += montoIngreso;
+        
+        emprendedor.setIngresosAcumulados(IngresosA);
+        
+        JOptionPane.showMessageDialog(null, "Ingresos acumulados: " + IngresosA);
         
         jtfMontoIngreso.setText("");
         jtfFechaIngreso.setText("");

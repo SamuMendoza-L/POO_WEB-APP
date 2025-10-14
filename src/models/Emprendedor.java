@@ -12,6 +12,7 @@ public class Emprendedor extends Usuario{
     private Lista Egresos;
     private Lista Productos;
     private Lista Pedidos;
+    private double IngresosAcumulados;
     
     public Emprendedor(String name, String last_name, String Tell, String email, String password, String Carrera, String NombreNegocio, String TipoNegocio){
         super(name, last_name, Tell, email, password, "Emprendedor");
@@ -22,6 +23,7 @@ public class Emprendedor extends Usuario{
         this.Egresos = new Lista();
         this.Productos = new Lista();
         this.Pedidos = new Lista();
+        this.IngresosAcumulados = 0;
         
     }
 
@@ -80,6 +82,17 @@ public class Emprendedor extends Usuario{
     public void setPedidos(Lista Pedidos) {
         this.Pedidos = Pedidos;
     }
+
+    public double getIngresosAcumulados() {
+        return IngresosAcumulados;
+    }
+
+    public void setIngresosAcumulados(double IngresosAcumulados) {
+        this.IngresosAcumulados = IngresosAcumulados;
+    }
+    
+    
+    
     
     
     
