@@ -6,8 +6,12 @@ package Templates;
 import java.text.NumberFormat;
 import java.util.Locale;
 import models.Emprendedor;
-import models.Emprendedor;
 import models.Usuario;
+
+import models.IngresosEmprendedor;
+
+import java.time.LocalDate;
+import java.time.format.DateTimeFormatter;
 
 
 /**
@@ -65,10 +69,10 @@ public class Finanzas extends javax.swing.JPanel {
         jLabel4 = new javax.swing.JLabel();
         jLabel5 = new javax.swing.JLabel();
         jLabel6 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jComboBox1 = new javax.swing.JComboBox<>();
+        jtfMontoIngreso = new javax.swing.JTextField();
+        jtfFechaIngreso = new javax.swing.JTextField();
+        jtfDescripcionIngreso = new javax.swing.JTextField();
+        jcMetodoPagoIngreso = new javax.swing.JComboBox<>();
         panelRound13 = new RoundersComponents.PanelRound();
         jLabel11 = new javax.swing.JLabel();
         lblTotalIngresos = new javax.swing.JLabel();
@@ -278,12 +282,12 @@ public class Finanzas extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
         jLabel6.setText("Descripción:");
         panelRound7.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 300, -1, -1));
-        panelRound7.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 310, -1));
-        panelRound7.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 310, -1));
-        panelRound7.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 310, -1));
+        panelRound7.add(jtfMontoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 200, 310, -1));
+        panelRound7.add(jtfFechaIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 250, 310, -1));
+        panelRound7.add(jtfDescripcionIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 300, 310, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia", " " }));
-        panelRound7.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 310, -1));
+        jcMetodoPagoIngreso.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Efectivo", "Transferencia", " " }));
+        panelRound7.add(jcMetodoPagoIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(210, 350, 310, -1));
 
         panelRound13.setBackground(new java.awt.Color(255, 255, 255));
         panelRound13.setRoundBottomLeft(50);
@@ -305,6 +309,11 @@ public class Finanzas extends javax.swing.JPanel {
         RegistrarIngreso.setForeground(new java.awt.Color(255, 255, 255));
         RegistrarIngreso.setText("REGISTRAR");
         RegistrarIngreso.setRoundBottomLeft(30);
+        RegistrarIngreso.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                RegistrarIngresoActionPerformed(evt);
+            }
+        });
         panelRound7.add(RegistrarIngreso, new org.netbeans.lib.awtextra.AbsoluteConstraints(170, 430, 210, 35));
 
         panelRound1.add(panelRound7, java.awt.BorderLayout.CENTER);
@@ -494,11 +503,33 @@ public class Finanzas extends javax.swing.JPanel {
         );
     }// </editor-fold>//GEN-END:initComponents
 
+    private void RegistrarIngresoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_RegistrarIngresoActionPerformed
+        // TODO add your handling code here:
+        double montoIngreso = Double.parseDouble(jtfMontoIngreso.getText());
+        String fechaIngreso = jtfFechaIngreso.getText();
+        
+        //Formato para la fecha
+        DateTimeFormatter formato = DateTimeFormatter.ofPattern("dd/MM/yyyy");
+        LocalDate fecha = LocalDate.parse(fechaIngreso, formato);
+        
+        String descripcionIngreso = jtfDescripcionIngreso.getText();
+        String metodoPagoIngreso = (String)jcMetodoPagoIngreso.getSelectedItem();
+        
+        IngresosEmprendedor ingresoE = new IngresosEmprendedor(montoIngreso, fecha, descripcionIngreso, metodoPagoIngreso);
+        
+        emprendedor.getIngresos().AdicionarFinal(ingresoE);
+        
+        
+        
+        
+        
+        
+    }//GEN-LAST:event_RegistrarIngresoActionPerformed
+
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
     private RoundersComponents.ButtonRound RegistrarEgreso;
     private RoundersComponents.ButtonRound RegistrarIngreso;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
@@ -523,12 +554,13 @@ public class Finanzas extends javax.swing.JPanel {
     private javax.swing.JPanel jPanel9;
     private javax.swing.JSeparator jSeparator1;
     private javax.swing.JSeparator jSeparator2;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
     private javax.swing.JTextField jTextField4;
     private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
+    private javax.swing.JComboBox<String> jcMetodoPagoIngreso;
+    private javax.swing.JTextField jtfDescripcionIngreso;
+    private javax.swing.JTextField jtfFechaIngreso;
+    private javax.swing.JTextField jtfMontoIngreso;
     private javax.swing.JLabel lblTotalEgresos;
     private javax.swing.JLabel lblTotalIngresos;
     private RoundersComponents.PanelRound panelRound1;
