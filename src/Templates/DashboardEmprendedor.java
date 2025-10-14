@@ -326,8 +326,6 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
     private void buttonRound5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound5ActionPerformed
         // TODO add your handling code here:
         
-        
-        
         new Login().setVisible(true);
         this.dispose();
     }//GEN-LAST:event_buttonRound5ActionPerformed
