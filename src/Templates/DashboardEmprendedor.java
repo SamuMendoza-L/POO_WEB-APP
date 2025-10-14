@@ -158,6 +158,11 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         buttonRound5.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
         buttonRound5.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         buttonRound5.setVerifyInputWhenFocusTarget(false);
+        buttonRound5.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                buttonRound5ActionPerformed(evt);
+            }
+        });
         menu.add(buttonRound5, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 870, 180, 40));
 
         btnProductos.setBackground(new java.awt.Color(18, 65, 112));
@@ -317,6 +322,15 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         btnMetricas.setForeground(Color.black);
         
     }//GEN-LAST:event_btnMetricasActionPerformed
+
+    private void buttonRound5ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound5ActionPerformed
+        // TODO add your handling code here:
+        
+        
+        
+        new Login().setVisible(true);
+        this.dispose();
+    }//GEN-LAST:event_buttonRound5ActionPerformed
 
     /**
      * @param args the command line arguments
