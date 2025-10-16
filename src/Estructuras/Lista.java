@@ -5,6 +5,7 @@ import Templates.Login;
 import javax.swing.JOptionPane;
 import models.Usuario;
 import models.Cliente;
+import models.Producto;
 
 
 public class Lista {
@@ -65,6 +66,13 @@ public class Lista {
         } else {
             JOptionPane.showMessageDialog(null, "Credenciales incorrectas");
             return null;
+        }
+    }
+    
+    public int codigoProducto(){
+        Nodo aux = primero;
+        while(aux!=null){
+            
         }
     }
     

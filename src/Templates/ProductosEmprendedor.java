@@ -4,6 +4,9 @@
  */
 package Templates;
 
+import models.Emprendedor;
+import models.Usuario;
+
 /**
  *
  * @author samuelmendoza
@@ -13,8 +16,19 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     /**
      * Creates new form ProductosEmprendedor
      */
-    public ProductosEmprendedor() {
+    private Emprendedor emprendedor;
+    public ProductosEmprendedor(Usuario u) {
         initComponents();
+        
+        if(u instanceof Emprendedor){
+            this.emprendedor = (Emprendedor) u;
+        }
+        
+        
+        
+        
+        
+        
     }
 
     /**
@@ -46,20 +60,20 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
-        jTextField2 = new javax.swing.JTextField();
-        jTextField3 = new javax.swing.JTextField();
-        jTextField4 = new javax.swing.JTextField();
-        jTextField5 = new javax.swing.JTextField();
+        jtCodigoProducto = new javax.swing.JTextField();
+        jtfNombreProducto = new javax.swing.JTextField();
+        jtfPrecioProducto = new javax.swing.JTextField();
+        jtfStock = new javax.swing.JTextField();
         jScrollPane2 = new javax.swing.JScrollPane();
-        jTextArea1 = new javax.swing.JTextArea();
-        buttonRound1 = new RoundersComponents.ButtonRound();
+        JtaDescripcionProducto = new javax.swing.JTextArea();
+        btnRegitarProducto = new RoundersComponents.ButtonRound();
         jLabel9 = new javax.swing.JLabel();
         jLabel10 = new javax.swing.JLabel();
         jLabel11 = new javax.swing.JLabel();
         jLabel12 = new javax.swing.JLabel();
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
-        jComboBox2 = new javax.swing.JComboBox<>();
+        jcEstadoProducto = new javax.swing.JComboBox<>();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         panelRound3 = new RoundersComponents.PanelRound();
@@ -237,31 +251,31 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
         jLabel6.setText("Descripción");
         panelRound2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
-        panelRound2.add(jTextField2, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 93, 280, 40));
-        panelRound2.add(jTextField3, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 280, 40));
-        panelRound2.add(jTextField4, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 240, 40));
-        panelRound2.add(jTextField5, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 240, 40));
+        panelRound2.add(jtCodigoProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 93, 280, 40));
+        panelRound2.add(jtfNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 280, 40));
+        panelRound2.add(jtfPrecioProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 240, 40));
+        panelRound2.add(jtfStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 240, 40));
 
-        jTextArea1.setColumns(20);
-        jTextArea1.setRows(5);
-        jScrollPane2.setViewportView(jTextArea1);
+        JtaDescripcionProducto.setColumns(20);
+        JtaDescripcionProducto.setRows(5);
+        jScrollPane2.setViewportView(JtaDescripcionProducto);
 
         panelRound2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 230, 250, -1));
 
-        buttonRound1.setBackground(new java.awt.Color(38, 102, 127));
-        buttonRound1.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound1.setText("Guardar producto");
-        buttonRound1.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
-        buttonRound1.setRoundBottomLeft(50);
-        buttonRound1.setRoundBottomRight(50);
-        buttonRound1.setRoundTopLeft(50);
-        buttonRound1.setRoundTopRight(50);
-        buttonRound1.addActionListener(new java.awt.event.ActionListener() {
+        btnRegitarProducto.setBackground(new java.awt.Color(38, 102, 127));
+        btnRegitarProducto.setForeground(new java.awt.Color(255, 255, 255));
+        btnRegitarProducto.setText("Guardar producto");
+        btnRegitarProducto.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
+        btnRegitarProducto.setRoundBottomLeft(50);
+        btnRegitarProducto.setRoundBottomRight(50);
+        btnRegitarProducto.setRoundTopLeft(50);
+        btnRegitarProducto.setRoundTopRight(50);
+        btnRegitarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound1ActionPerformed(evt);
+                btnRegitarProductoActionPerformed(evt);
             }
         });
-        panelRound2.add(buttonRound1, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 330, 40));
+        panelRound2.add(btnRegitarProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(240, 350, 330, 40));
 
         jLabel9.setFont(new java.awt.Font("Noto Sans Kannada", 1, 36)); // NOI18N
         jLabel9.setText("Un nuevo Producto");
@@ -287,8 +301,8 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel14.setText("Estado");
         panelRound2.add(jLabel14, new org.netbeans.lib.awtextra.AbsoluteConstraints(420, 240, -1, -1));
 
-        jComboBox2.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
-        panelRound2.add(jComboBox2, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 240, 40));
+        jcEstadoProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
+        panelRound2.add(jcEstadoProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 240, 40));
 
         jPanel12.add(panelRound2, java.awt.BorderLayout.PAGE_START);
 
@@ -401,11 +415,13 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         add(jPanel5, java.awt.BorderLayout.CENTER);
     }// </editor-fold>//GEN-END:initComponents
 
-    private void buttonRound1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound1ActionPerformed
+    private void btnRegitarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegitarProductoActionPerformed
         // TODO add your handling code here:
+        int codigoP = emprendedor
         
         
-    }//GEN-LAST:event_buttonRound1ActionPerformed
+        
+    }//GEN-LAST:event_btnRegitarProductoActionPerformed
 
     private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
         // TODO add your handling code here:
@@ -417,12 +433,12 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
-    private RoundersComponents.ButtonRound buttonRound1;
+    private javax.swing.JTextArea JtaDescripcionProducto;
+    private RoundersComponents.ButtonRound btnRegitarProducto;
     private RoundersComponents.ButtonRound buttonRound2;
     private RoundersComponents.ButtonRound buttonRound3;
     private RoundersComponents.ButtonRound buttonRound4;
     private javax.swing.JComboBox<String> jComboBox1;
-    private javax.swing.JComboBox<String> jComboBox2;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -457,15 +473,15 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextArea jTextArea1;
     private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField2;
-    private javax.swing.JTextField jTextField3;
-    private javax.swing.JTextField jTextField4;
-    private javax.swing.JTextField jTextField5;
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JComboBox<String> jcEstadoProducto;
+    private javax.swing.JTextField jtCodigoProducto;
+    private javax.swing.JTextField jtfNombreProducto;
+    private javax.swing.JTextField jtfPrecioProducto;
+    private javax.swing.JTextField jtfStock;
     private RoundersComponents.PanelRound panelRound1;
     private RoundersComponents.PanelRound panelRound2;
     private RoundersComponents.PanelRound panelRound3;
