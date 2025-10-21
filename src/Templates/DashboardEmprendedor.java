@@ -270,7 +270,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         // TODO add your handling code here:
         resetButtons();
         
-        ProductosEmprendedor ProE = new ProductosEmprendedor();
+        ProductosEmprendedor ProE = new ProductosEmprendedor(emprendedor);
         ProE.setSize(1549, 930);
         ProE.setLocation(0, 0);
         

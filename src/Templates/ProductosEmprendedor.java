@@ -29,6 +29,8 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         
         
         
+        
+        
     }
 
     /**
@@ -417,7 +419,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
     private void btnRegitarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegitarProductoActionPerformed
         // TODO add your handling code here:
-        int codigoP = emprendedor
+        
         
         
         

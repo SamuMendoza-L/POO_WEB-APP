@@ -69,12 +69,13 @@ public class Lista {
         }
     }
     
-    public int codigoProducto(){
-        Nodo aux = primero;
-        while(aux!=null){
-            
-        }
-    }
+//    public int codigoProducto(){
+//        Nodo aux = primero;
+//        while(aux!=null){
+//            ((Producto)aux.getDato()).getCodigo()
+//            
+//        }
+//    }
     
     
     
