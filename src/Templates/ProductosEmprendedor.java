@@ -4,8 +4,10 @@
  */
 package Templates;
 
+import javax.swing.JOptionPane;
 import models.Emprendedor;
 import models.Usuario;
+import models.Producto;
 
 /**
  *
@@ -22,16 +24,89 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         
         if(u instanceof Emprendedor){
             this.emprendedor = (Emprendedor) u;
+            cargarCategoriasSegunTipo();  // Cargar categorías al inicializar
         }
         
-        
-        
-        
-        
-        
-        
-        
+
     }
+    
+    public void cargarCategoriasSegunTipo(){
+         String TipoN = emprendedor.getTipoNegocio();
+        
+        jcCategoria.removeAllItems();
+       
+        switch(TipoN){
+            case "Moda y Belleza":
+            jcCategoria.addItem("Camisetas");
+            jcCategoria.addItem("Hoodies");
+            jcCategoria.addItem("Accesorios");
+            jcCategoria.addItem("Bisutería");
+            jcCategoria.addItem("Calzado");
+            break;
+            
+        case "Gastronomía":
+            jcCategoria.addItem("Postres");
+            jcCategoria.addItem("Snacks");
+            jcCategoria.addItem("Comidas rápidas");
+            jcCategoria.addItem("Bebidas naturales");
+            jcCategoria.addItem("Café");
+            break;
+            
+        case "Tecnología":
+            jcCategoria.addItem("Accesorios para celular");
+            jcCategoria.addItem("Gadgets");
+            jcCategoria.addItem("Reparaciones");
+            jcCategoria.addItem("Software");
+            break;
+            
+        case "Arte y Diseño":
+            jcCategoria.addItem("Cuadernos personalizados");
+            jcCategoria.addItem("Stickers");
+            jcCategoria.addItem("Ilustraciones");
+            jcCategoria.addItem("Arte digital");
+            break;
+            
+        case "Educación":
+            jcCategoria.addItem("Clases particulares");
+            jcCategoria.addItem("Asesorías");
+            jcCategoria.addItem("Resúmenes");
+            jcCategoria.addItem("Trabajos académicos");
+            break;
+            
+        case "Servicios Profesionales":
+            jcCategoria.addItem("Fotografía");
+            jcCategoria.addItem("Diseño gráfico");
+            jcCategoria.addItem("Edición de video");
+            jcCategoria.addItem("Ilustración");
+            break;
+            
+        case "Salud y Bienestar":
+            jcCategoria.addItem("Suplementos");
+            jcCategoria.addItem("Productos naturales");
+            jcCategoria.addItem("Sesiones de entrenamiento");
+            break;
+            
+        case "Entretenimiento":
+            jcCategoria.addItem("Eventos");
+            jcCategoria.addItem("Música");
+            jcCategoria.addItem("Shows");
+            jcCategoria.addItem("Contenido digital");
+            jcCategoria.addItem("Streaming");
+            break;
+            
+        case "Sostenible / Ecológico":
+            jcCategoria.addItem("Productos reciclados");
+            jcCategoria.addItem("Artesanías ecológicas");
+            jcCategoria.addItem("Ropa sostenible");
+            break;
+            
+        case "Otro":
+            jcCategoria.addItem("Otros productos");
+            break;
+        }
+    }
+    
+    
 
     /**
      * This method is called from within the constructor to initialize the form.
@@ -62,7 +137,6 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jSeparator1 = new javax.swing.JSeparator();
         jSeparator2 = new javax.swing.JSeparator();
         jLabel6 = new javax.swing.JLabel();
-        jtCodigoProducto = new javax.swing.JTextField();
         jtfNombreProducto = new javax.swing.JTextField();
         jtfPrecioProducto = new javax.swing.JTextField();
         jtfStock = new javax.swing.JTextField();
@@ -76,6 +150,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel13 = new javax.swing.JLabel();
         jLabel14 = new javax.swing.JLabel();
         jcEstadoProducto = new javax.swing.JComboBox<>();
+        jcCategoria = new javax.swing.JComboBox<>();
         jPanel13 = new javax.swing.JPanel();
         jPanel14 = new javax.swing.JPanel();
         panelRound3 = new RoundersComponents.PanelRound();
@@ -253,8 +328,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel6.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
         jLabel6.setText("Descripción");
         panelRound2.add(jLabel6, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 240, -1, -1));
-        panelRound2.add(jtCodigoProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 93, 280, 40));
-        panelRound2.add(jtfNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(110, 160, 280, 40));
+        panelRound2.add(jtfNombreProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 160, 240, 40));
         panelRound2.add(jtfPrecioProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 90, 240, 40));
         panelRound2.add(jtfStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 170, 240, 40));
 
@@ -262,7 +336,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         JtaDescripcionProducto.setRows(5);
         jScrollPane2.setViewportView(JtaDescripcionProducto);
 
-        panelRound2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(144, 230, 250, -1));
+        panelRound2.add(jScrollPane2, new org.netbeans.lib.awtextra.AbsoluteConstraints(154, 230, 240, -1));
 
         btnRegitarProducto.setBackground(new java.awt.Color(38, 102, 127));
         btnRegitarProducto.setForeground(new java.awt.Color(255, 255, 255));
@@ -284,7 +358,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         panelRound2.add(jLabel9, new org.netbeans.lib.awtextra.AbsoluteConstraints(33, 23, -1, -1));
 
         jLabel10.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
-        jLabel10.setText("Código");
+        jLabel10.setText("Categoria");
         panelRound2.add(jLabel10, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 100, -1, -1));
 
         jLabel11.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
@@ -305,6 +379,13 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
         jcEstadoProducto.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
         panelRound2.add(jcEstadoProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(490, 240, 240, 40));
+
+        jcCategoria.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                jcCategoriaActionPerformed(evt);
+            }
+        });
+        panelRound2.add(jcCategoria, new org.netbeans.lib.awtextra.AbsoluteConstraints(150, 100, 240, 40));
 
         jPanel12.add(panelRound2, java.awt.BorderLayout.PAGE_START);
 
@@ -419,6 +500,19 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
     private void btnRegitarProductoActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnRegitarProductoActionPerformed
         // TODO add your handling code here:
+        String categoria = (String)jcCategoria.getSelectedItem();
+        String nombre = jtfNombreProducto.getText();
+        double precio = Double.parseDouble(jtfPrecioProducto.getText());
+        int stock = Integer.parseInt(jtfStock.getText());
+        String descripcion = JtaDescripcionProducto.getText();
+        String estado = (String)jcEstadoProducto.getSelectedItem();
+        
+        Producto pd = new Producto(nombre, descripcion, precio, stock, estado, categoria);
+        emprendedor.getProductos().AdicionarFinal(pd);
+        
+        JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
+        JOptionPane.showMessageDialog(null, "Informacion de producto: " + emprendedor.getProductos().toString());
+        
         
         
         
@@ -434,6 +528,18 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private void buttonRound4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound4ActionPerformed
         // TODO add your handling code here:
     }//GEN-LAST:event_buttonRound4ActionPerformed
+
+    private void jcCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcCategoriaActionPerformed
+        // TODO add your handling code here:
+       
+                
+        
+        
+        
+        
+    }//GEN-LAST:event_jcCategoriaActionPerformed
+
+
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
@@ -481,8 +587,8 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JTextField jTextField6;
     private javax.swing.JTextField jTextField7;
     private javax.swing.JTextField jTextField8;
+    private javax.swing.JComboBox<String> jcCategoria;
     private javax.swing.JComboBox<String> jcEstadoProducto;
-    private javax.swing.JTextField jtCodigoProducto;
     private javax.swing.JTextField jtfNombreProducto;
     private javax.swing.JTextField jtfPrecioProducto;
     private javax.swing.JTextField jtfStock;

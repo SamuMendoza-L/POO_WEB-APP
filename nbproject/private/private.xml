@@ -4,13 +4,19 @@
     <open-files xmlns="http://www.netbeans.org/ns/projectui-open-files/2">
         <group>
             <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/DashboardEmprendedor.java</file>
-            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/Producto.java</file>
-            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/Finanzas.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/RegisterClient.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/Main.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/PedidosEmprendedor.java</file>
             <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/ProductosEmprendedor.java</file>
-            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/EgresosEmprendedor.java</file>
-            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/Emprendedor.java</file>
-            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/DashboardE.java</file>
             <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Estructuras/Lista.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/Emprendedor.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/Perfil.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/DashboardCliente.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/RegistroEmprendedor.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/Login.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/Finanzas.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/models/EgresosEmprendedor.java</file>
+            <file>file:/Users/samuelmendoza/NetBeansProjects/POO-WEP_APP/src/Templates/DashboardE.java</file>
         </group>
     </open-files>
 </project-private>

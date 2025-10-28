@@ -28,6 +28,8 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
             this.emprendedor = (Emprendedor) usuario;
         }
         
+        
+        
         JOptionPane.showMessageDialog(null, "Acabas de iniciar sesion a nombre de: " + emprendedor.getName());
         
         PanelContenedor.setLayout(new BorderLayout());

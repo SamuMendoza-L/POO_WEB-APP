@@ -50,7 +50,7 @@ public class Main extends javax.swing.JFrame {
         String cc = "1234";
         String carrera = "Ingenieria Inf";
         String NombreN = "LUMO";
-        String TipoN = "tecnologia";
+        String TipoN = "Tecnología";
         
         Emprendedor emp = new Emprendedor(nombre, apellido, telefono, correo, cc, carrera, NombreN, TipoN);
         GetListaUsuarios().AdicionarFinal(emp);
