@@ -5,9 +5,14 @@
 package Templates;
 
 import javax.swing.JOptionPane;
+import javax.swing.table.DefaultTableModel;
 import models.Emprendedor;
 import models.Usuario;
 import models.Producto;
+import Estructuras.Nodo;
+import java.text.NumberFormat;
+import java.util.Locale;
+
 
 /**
  *
@@ -105,6 +110,39 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
             break;
         }
     }
+    
+    private void cargarTablaProductos() {
+    // Obtener el modelo de la tabla
+    DefaultTableModel modelo = (DefaultTableModel) jTable1.getModel();
+    
+    // Limpiar la tabla antes de llenarla
+    modelo.setRowCount(0);
+    
+    // Recorrer la lista de productos del emprendedor
+    Nodo aux = emprendedor.getProductos().getPrimero();
+    while (aux != null) {
+        Producto p = (Producto) aux.getDato();
+        
+        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        String precioFormateado = formatoCOP.format(p.getPrecio());
+
+        
+        // Agregar fila con los datos del producto
+        modelo.addRow(new Object[] {
+            p.getCodigo(),
+            p.getNombre(),
+            precioFormateado,
+            p.getStock(),
+            p.getCategoria(),
+            p.getEstado(),
+            p.getDescripcion()
+            
+        });
+        
+        aux = aux.getEnlace();
+    }
+}
+
     
     
 
@@ -280,15 +318,23 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
         jTable1.setModel(new javax.swing.table.DefaultTableModel(
             new Object [][] {
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null},
-                {null, null, null, null, null, null}
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null},
+                {null, null, null, null, null, null, null}
             },
             new String [] {
-                "Código", "Nombre ", "Precio", "Stock", "Estado", "Descripción"
+                "Código", "Nombre ", "Precio", "Stock", "Categoría", "Estado", "Descripción"
             }
-        ));
+        ) {
+            boolean[] canEdit = new boolean [] {
+                false, false, false, false, false, false, false
+            };
+
+            public boolean isCellEditable(int rowIndex, int columnIndex) {
+                return canEdit [columnIndex];
+            }
+        });
         jScrollPane1.setViewportView(jTable1);
 
         jPanel9.add(jScrollPane1, java.awt.BorderLayout.CENTER);
@@ -342,10 +388,10 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         btnRegitarProducto.setForeground(new java.awt.Color(255, 255, 255));
         btnRegitarProducto.setText("Guardar producto");
         btnRegitarProducto.setFont(new java.awt.Font("Noto Sans Kannada", 0, 18)); // NOI18N
-        btnRegitarProducto.setRoundBottomLeft(50);
-        btnRegitarProducto.setRoundBottomRight(50);
-        btnRegitarProducto.setRoundTopLeft(50);
-        btnRegitarProducto.setRoundTopRight(50);
+        btnRegitarProducto.setRoundBottomLeft(30);
+        btnRegitarProducto.setRoundBottomRight(30);
+        btnRegitarProducto.setRoundTopLeft(30);
+        btnRegitarProducto.setRoundTopRight(30);
         btnRegitarProducto.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
                 btnRegitarProductoActionPerformed(evt);
@@ -513,6 +559,8 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         JOptionPane.showMessageDialog(null, "Producto agregado correctamente");
         JOptionPane.showMessageDialog(null, "Informacion de producto: " + emprendedor.getProductos().toString());
         
+        LimpiarCampos();
+        cargarTablaProductos();
         
         
         
@@ -531,15 +579,16 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
     private void jcCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcCategoriaActionPerformed
         // TODO add your handling code here:
-       
-                
-        
-        
-        
-        
+
     }//GEN-LAST:event_jcCategoriaActionPerformed
 
-
+    public void LimpiarCampos(){
+        JtaDescripcionProducto.setText("");
+        jtfNombreProducto.setText("");
+        jtfPrecioProducto.setText("");
+        jtfStock.setText("");
+        
+    }
 
 
     // Variables declaration - do not modify//GEN-BEGIN:variables
