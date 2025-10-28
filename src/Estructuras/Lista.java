@@ -45,6 +45,36 @@ public class Lista {
         }
     }
     
+    public void Eliminar(Object data) {
+        if (esVacia()) {
+            System.out.println("La lista está vacía, no se puede eliminar.");
+            return;
+        }
+
+        // Caso 1: el primer nodo es el que queremos eliminar
+        if (primero.getDato().equals(data)) {
+            primero = primero.getEnlace();
+            return;
+        }
+
+        // Caso 2: buscar el nodo anterior al que queremos eliminar
+        Nodo anterior = primero;
+        Nodo actual = primero.getEnlace();
+
+        while (actual != null && !actual.getDato().equals(data)) {
+            anterior = actual;
+            actual = actual.getEnlace();
+        }
+
+        // Si encontramos el nodo
+        if (actual != null) {
+            anterior.setEnlace(actual.getEnlace()); // desconectamos el nodo
+        } else {
+            System.out.println("El elemento no se encontró en la lista.");
+        }
+    }
+
+    
     public Usuario BuscarUsuario(String email, String Pass, Login loginFrame){
         Nodo aux = primero;
         while(aux!=null && !((Usuario)aux.getDato()).getEmail().equals(email))

@@ -87,6 +87,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
         PanelContenedor = new javax.swing.JPanel();
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
+        setPreferredSize(new java.awt.Dimension(1920, 1080));
 
         jPanel1.setBackground(new java.awt.Color(18, 65, 112));
         jPanel1.setLayout(new java.awt.BorderLayout());
@@ -310,6 +311,17 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnPerfilActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnPerfilActionPerformed
         // TODO add your handling code here:
+        resetButtons();
+        
+        Perfil P = new Perfil(emprendedor);
+        P.setSize(1549, 930);
+        P.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(P, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
+        
         
         btnPerfil.setBackground(Color.white);
         btnPerfil.setForeground(Color.black);

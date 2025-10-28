@@ -42,6 +42,19 @@ public class Main extends javax.swing.JFrame {
         } catch (Exception e) {
             e.printStackTrace();
         }
+        
+        String nombre = "Samuel";
+        String apellido = "Mendoza";
+        String telefono = "313-7118377";
+        String correo = "s@gmail.com";
+        String cc = "1234";
+        String carrera = "Ingenieria Inf";
+        String NombreN = "LUMO";
+        String TipoN = "tecnologia";
+        
+        Emprendedor emp = new Emprendedor(nombre, apellido, telefono, correo, cc, carrera, NombreN, TipoN);
+        GetListaUsuarios().AdicionarFinal(emp);
+        
     }
     
     

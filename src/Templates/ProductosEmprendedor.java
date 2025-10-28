@@ -423,6 +423,8 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         
         
         
+        
+        
     }//GEN-LAST:event_btnRegitarProductoActionPerformed
 
     private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
