@@ -153,7 +153,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
                 btnPerfilActionPerformed(evt);
             }
         });
-        menu.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 200, 40));
+        menu.add(btnPerfil, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 200, 40));
 
         buttonRound5.setBackground(new java.awt.Color(18, 65, 112));
         buttonRound5.setForeground(new java.awt.Color(255, 255, 255));
@@ -195,7 +195,7 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
                 btnMetricasActionPerformed(evt);
             }
         });
-        menu.add(btnMetricas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 470, 200, 40));
+        menu.add(btnMetricas, new org.netbeans.lib.awtextra.AbsoluteConstraints(60, 410, 200, 40));
 
         jLabel2.setIcon(new javax.swing.ImageIcon(getClass().getResource("/poo_wep_app/images/IconoFrameApp-small.png"))); // NOI18N
         menu.add(jLabel2, new org.netbeans.lib.awtextra.AbsoluteConstraints(70, 40, -1, -1));
@@ -331,6 +331,16 @@ public class DashboardEmprendedor extends javax.swing.JFrame {
 
     private void btnMetricasActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnMetricasActionPerformed
         // TODO add your handling code here:
+        resetButtons();
+        
+        Metricas Me = new Metricas(emprendedor);
+        Me.setSize(1549, 930);
+        Me.setLocation(0, 0);
+        
+        PanelContenedor.removeAll();
+        PanelContenedor.add(Me, BorderLayout.CENTER);
+        PanelContenedor.revalidate();
+        PanelContenedor.repaint();
         
         btnMetricas.setBackground(Color.white);
         btnMetricas.setForeground(Color.black);

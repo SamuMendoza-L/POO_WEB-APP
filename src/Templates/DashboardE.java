@@ -9,6 +9,8 @@ import Templates.Login;
 import models.Emprendedor;
 import java.text.NumberFormat;
 import java.util.Locale;
+import models.EgresosEmprendedor;
+import Estructuras.Nodo;
 
      
 
@@ -27,6 +29,35 @@ public class DashboardE extends javax.swing.JPanel {
         
         if (u instanceof Emprendedor) {
             this.emprendedor = (Emprendedor) u;
+            
+            double totalingresos = emprendedor.getIngresosAcumulados();
+            NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+            String ingresosformato = formatoCOP.format(totalingresos);
+            
+            double totalegresos = emprendedor.getEgresosAcumulados();
+            String egresosformato = formatoCOP.format(totalegresos);
+            
+            lblIngresosMensual.setText(ingresosformato);
+            lblEgresosMensuales.setText(egresosformato);
+            
+
+            
+            
+            int CantidadP = emprendedor.getTotalProductos();
+            String CantidadProductos = Integer.toString(CantidadP);
+            lblCantidadProductos.setText(CantidadProductos);
+
+            int CantidadPe = emprendedor.getTotalPedidos();
+            String CantidadPedidos = Integer.toString(CantidadPe);
+            lblCantidadPedidos.setText(CantidadPedidos);
+            
+            String nombreN = emprendedor.getNombreNegocio();
+            lblNombreNegocio.setText(nombreN);
+
+            String tipoN = emprendedor.getTipoNegocio();
+            lblTipoNegocio.setText(tipoN);
+            
+            
         }
         
         lblSaludo.setText("Estamos felices de tenerte aqui, " + emprendedor.getName());
@@ -41,19 +72,7 @@ public class DashboardE extends javax.swing.JPanel {
 //        lblEgresosMensuales.setText(formatoCOP.format(totalEgresos));
         
         
-        int CantidadP = emprendedor.getTotalProductos();
-        String CantidadProductos = Integer.toString(CantidadP);
-        lblCantidadProductos.setText(CantidadProductos);
         
-        int CantidadPe = emprendedor.getTotalPedidos();
-        String CantidadPedidos = Integer.toString(CantidadPe);
-        lblCantidadPedidos.setText(CantidadPedidos);
-        
-        String nombreN = emprendedor.getNombreNegocio();
-        lblNombreNegocio.setText(nombreN);
-        
-        String tipoN = emprendedor.getTipoNegocio();
-        lblTipoNegocio.setText(tipoN);
         
     }
 
