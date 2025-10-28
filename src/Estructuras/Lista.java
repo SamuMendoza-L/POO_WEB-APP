@@ -6,6 +6,7 @@ import javax.swing.JOptionPane;
 import models.Usuario;
 import models.Cliente;
 import models.Producto;
+import models.Main;
 
 
 public class Lista {
@@ -13,6 +14,10 @@ public class Lista {
 
     public Lista() {
     }
+    
+    
+    
+    
 
     public Nodo getPrimero() {
         return primero;
@@ -106,6 +111,57 @@ public class Lista {
 //            
 //        }
 //    }
+    
+    
+    public Producto BuscarProducto(int codigo){
+        
+        
+        Nodo aux = primero;
+        while(aux != null && ((Producto)aux.getDato()).getCodigo() != codigo)
+            aux = aux.getEnlace();
+        
+        if(aux!=null && ((Producto)aux.getDato()).getCodigo() == codigo){
+            Producto ProductoEncontrado = (Producto)aux.getDato();
+            
+            return ProductoEncontrado;
+        }
+        else{
+            JOptionPane.showMessageDialog(null, "Producto no encontrado o el codigo es incrrecto");
+            return null;
+        }
+        
+    }
+    
+    public void EliminarProducto(Object data){
+        if (esVacia()) {
+            System.out.println("La lista de productos está vacía, no se pueden hacer cambios.");
+            return;
+        }
+        
+        if(primero.getDato().equals(data)){
+            primero = primero.getEnlace();
+            return;
+        }
+        
+        Nodo anterior = primero;
+        Nodo actual = primero.getEnlace();
+
+        while (actual != null && !actual.getDato().equals(data)) {
+            anterior = actual;
+            actual = actual.getEnlace();
+        }
+        
+        // Si encontramos el nodo
+        if (actual != null) {
+            anterior.setEnlace(actual.getEnlace()); // desconectamos el nodo
+        } else {
+            System.out.println("El elemento no se encontró en la lista.");
+        }
+        
+    }
+    
+    
+    
     
     
     

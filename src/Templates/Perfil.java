@@ -179,9 +179,6 @@ public class Perfil extends javax.swing.JPanel {
         String nombreneg = NombreNegocioP.getText();
         String carrera = CarreraPerfil.getText();
         
-        
-        
-        
     }//GEN-LAST:event_EditarInfoActionPerformed
 
     private void buttonRound3ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound3ActionPerformed

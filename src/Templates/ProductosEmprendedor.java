@@ -10,8 +10,10 @@ import models.Emprendedor;
 import models.Usuario;
 import models.Producto;
 import Estructuras.Nodo;
+import Estructuras.Lista;
 import java.text.NumberFormat;
 import java.util.Locale;
+
 
 
 /**
@@ -30,6 +32,9 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         if(u instanceof Emprendedor){
             this.emprendedor = (Emprendedor) u;
             cargarCategoriasSegunTipo();  // Cargar categorías al inicializar
+            
+            DeshabilitarCampos();
+            
         }
         
 
@@ -142,6 +147,22 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         aux = aux.getEnlace();
     }
 }
+    public void DeshabilitarCampos(){
+        
+        BuscarNombre.setEnabled(false);
+        BuscarPrecio.setEnabled(false);
+        BuscarStock.setEnabled(false);
+        BuscarEstado.setEnabled(false);
+    }
+    
+    public void HabilitarCampos(){
+        BuscarNombre.setEnabled(true);
+        BuscarPrecio.setEnabled(true);
+        BuscarStock.setEnabled(true);
+        BuscarEstado.setEnabled(true);
+    }
+    
+    
 
     
     
@@ -198,15 +219,16 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel5 = new javax.swing.JLabel();
         jLabel7 = new javax.swing.JLabel();
         jLabel8 = new javax.swing.JLabel();
-        jTextField1 = new javax.swing.JTextField();
-        jTextField6 = new javax.swing.JTextField();
-        jTextField7 = new javax.swing.JTextField();
-        jTextField8 = new javax.swing.JTextField();
+        CodigoProducto = new javax.swing.JTextField();
+        BuscarNombre = new javax.swing.JTextField();
+        BuscarPrecio = new javax.swing.JTextField();
+        BuscarStock = new javax.swing.JTextField();
         jLabel3 = new javax.swing.JLabel();
-        jComboBox1 = new javax.swing.JComboBox<>();
-        buttonRound2 = new RoundersComponents.ButtonRound();
-        buttonRound3 = new RoundersComponents.ButtonRound();
-        buttonRound4 = new RoundersComponents.ButtonRound();
+        BuscarEstado = new javax.swing.JComboBox<>();
+        BtnBuscar = new RoundersComponents.ButtonRound();
+        BtnGuardarCambios = new RoundersComponents.ButtonRound();
+        BtnEliminar = new RoundersComponents.ButtonRound();
+        BtnEditar1 = new RoundersComponents.ButtonRound();
 
         setBackground(new java.awt.Color(255, 255, 255));
         setPreferredSize(new java.awt.Dimension(1549, 930));
@@ -276,6 +298,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
         add(jPanel4, java.awt.BorderLayout.PAGE_END);
 
+        jPanel5.setBackground(new java.awt.Color(221, 244, 231));
         jPanel5.setLayout(new java.awt.BorderLayout());
 
         panelRound1.setBackground(new java.awt.Color(255, 255, 255));
@@ -341,6 +364,7 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
 
         jPanel8.add(jPanel9, java.awt.BorderLayout.LINE_START);
 
+        jPanel10.setBackground(new java.awt.Color(221, 244, 231));
         jPanel10.setLayout(new java.awt.BorderLayout());
 
         jPanel11.setBackground(new java.awt.Color(221, 244, 231));
@@ -480,54 +504,79 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         jLabel8.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
         jLabel8.setText("Stock");
         panelRound3.add(jLabel8, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 230, -1, -1));
-        panelRound3.add(jTextField1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 340, -1));
-        panelRound3.add(jTextField6, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 340, -1));
-        panelRound3.add(jTextField7, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 340, -1));
-        panelRound3.add(jTextField8, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 340, -1));
+        panelRound3.add(CodigoProducto, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 110, 340, -1));
+        panelRound3.add(BuscarNombre, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 150, 340, -1));
+
+        BuscarPrecio.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BuscarPrecioActionPerformed(evt);
+            }
+        });
+        panelRound3.add(BuscarPrecio, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 190, 340, -1));
+        panelRound3.add(BuscarStock, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 230, 340, -1));
 
         jLabel3.setFont(new java.awt.Font("Noto Sans Myanmar", 0, 18)); // NOI18N
         jLabel3.setText("Estado");
         panelRound3.add(jLabel3, new org.netbeans.lib.awtextra.AbsoluteConstraints(30, 280, -1, -1));
 
-        jComboBox1.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
-        panelRound3.add(jComboBox1, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 340, 40));
+        BuscarEstado.setModel(new javax.swing.DefaultComboBoxModel<>(new String[] { "Disponible", "Agotado" }));
+        panelRound3.add(BuscarEstado, new org.netbeans.lib.awtextra.AbsoluteConstraints(120, 270, 340, 40));
 
-        buttonRound2.setBackground(new java.awt.Color(38, 102, 127));
-        buttonRound2.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound2.setText("BUSCAR");
-        buttonRound2.setRoundBottomLeft(30);
-        buttonRound2.setRoundBottomRight(30);
-        buttonRound2.setRoundTopLeft(30);
-        buttonRound2.setRoundTopRight(30);
-        buttonRound2.addActionListener(new java.awt.event.ActionListener() {
+        BtnBuscar.setBackground(new java.awt.Color(38, 102, 127));
+        BtnBuscar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnBuscar.setText("BUSCAR");
+        BtnBuscar.setRoundBottomLeft(30);
+        BtnBuscar.setRoundBottomRight(30);
+        BtnBuscar.setRoundTopLeft(30);
+        BtnBuscar.setRoundTopRight(30);
+        BtnBuscar.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound2ActionPerformed(evt);
+                BtnBuscarActionPerformed(evt);
             }
         });
-        panelRound3.add(buttonRound2, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 200, 45));
+        panelRound3.add(BtnBuscar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 110, 200, 45));
 
-        buttonRound3.setBackground(new java.awt.Color(38, 102, 127));
-        buttonRound3.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound3.setText("EDITAR");
-        buttonRound3.setRoundBottomLeft(30);
-        buttonRound3.setRoundBottomRight(30);
-        buttonRound3.setRoundTopLeft(30);
-        buttonRound3.setRoundTopRight(30);
-        panelRound3.add(buttonRound3, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 170, 200, 45));
-
-        buttonRound4.setBackground(new java.awt.Color(38, 102, 127));
-        buttonRound4.setForeground(new java.awt.Color(255, 255, 255));
-        buttonRound4.setText("ELIMINAR");
-        buttonRound4.setRoundBottomLeft(30);
-        buttonRound4.setRoundBottomRight(30);
-        buttonRound4.setRoundTopLeft(30);
-        buttonRound4.setRoundTopRight(30);
-        buttonRound4.addActionListener(new java.awt.event.ActionListener() {
+        BtnGuardarCambios.setBackground(new java.awt.Color(38, 102, 127));
+        BtnGuardarCambios.setForeground(new java.awt.Color(255, 255, 255));
+        BtnGuardarCambios.setText("GUARDAR CAMBIOS");
+        BtnGuardarCambios.setRoundBottomLeft(30);
+        BtnGuardarCambios.setRoundBottomRight(30);
+        BtnGuardarCambios.setRoundTopLeft(30);
+        BtnGuardarCambios.setRoundTopRight(30);
+        BtnGuardarCambios.addActionListener(new java.awt.event.ActionListener() {
             public void actionPerformed(java.awt.event.ActionEvent evt) {
-                buttonRound4ActionPerformed(evt);
+                BtnGuardarCambiosActionPerformed(evt);
             }
         });
-        panelRound3.add(buttonRound4, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 230, 200, 45));
+        panelRound3.add(BtnGuardarCambios, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 210, 200, 45));
+
+        BtnEliminar.setBackground(new java.awt.Color(38, 102, 127));
+        BtnEliminar.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEliminar.setText("ELIMINAR");
+        BtnEliminar.setRoundBottomLeft(30);
+        BtnEliminar.setRoundBottomRight(30);
+        BtnEliminar.setRoundTopLeft(30);
+        BtnEliminar.setRoundTopRight(30);
+        BtnEliminar.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEliminarActionPerformed(evt);
+            }
+        });
+        panelRound3.add(BtnEliminar, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 260, 200, 45));
+
+        BtnEditar1.setBackground(new java.awt.Color(38, 102, 127));
+        BtnEditar1.setForeground(new java.awt.Color(255, 255, 255));
+        BtnEditar1.setText("EDITAR");
+        BtnEditar1.setRoundBottomLeft(30);
+        BtnEditar1.setRoundBottomRight(30);
+        BtnEditar1.setRoundTopLeft(30);
+        BtnEditar1.setRoundTopRight(30);
+        BtnEditar1.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                BtnEditar1ActionPerformed(evt);
+            }
+        });
+        panelRound3.add(BtnEditar1, new org.netbeans.lib.awtextra.AbsoluteConstraints(510, 160, 200, 45));
 
         jPanel13.add(panelRound3, java.awt.BorderLayout.CENTER);
 
@@ -562,42 +611,123 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         LimpiarCampos();
         cargarTablaProductos();
         
-        
-        
-        
-        
-        
     }//GEN-LAST:event_btnRegitarProductoActionPerformed
 
-    private void buttonRound2ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound2ActionPerformed
+    private void BtnBuscarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnBuscarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonRound2ActionPerformed
+        
+        int CodigoP = Integer.parseInt(CodigoProducto.getText());
+        
+        Producto ProductoEncontrado = emprendedor.getProductos().BuscarProducto(CodigoP);
+        
+        
+        
+        NumberFormat formatoCOP = NumberFormat.getCurrencyInstance(new Locale("es", "CO"));
+        String precioFormateado = formatoCOP.format(ProductoEncontrado.getPrecio());
+        String stock = Integer.toString(ProductoEncontrado.getStock());
+        
+        if(ProductoEncontrado != null){
+            BuscarNombre.setText(ProductoEncontrado.getNombre());
+            BuscarPrecio.setText(precioFormateado);
+            BuscarStock.setText(stock);
+            JtaDescripcionProducto.setText(ProductoEncontrado.getDescripcion());
+            BuscarEstado.setSelectedItem(ProductoEncontrado.getEstado());
+            
+        }
+        
+    }//GEN-LAST:event_BtnBuscarActionPerformed
 
-    private void buttonRound4ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_buttonRound4ActionPerformed
+    private void BtnEliminarActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEliminarActionPerformed
         // TODO add your handling code here:
-    }//GEN-LAST:event_buttonRound4ActionPerformed
+        int CodigoP = Integer.parseInt(CodigoProducto.getText());
+        
+        Producto ProductoEncontrado = emprendedor.getProductos().BuscarProducto(CodigoP);
+        
+        int opcion = JOptionPane.showConfirmDialog(
+            this,
+            "¿Estás seguro de que deseas continuar?",
+            "Advertencia",
+            JOptionPane.YES_NO_OPTION,
+            JOptionPane.WARNING_MESSAGE
+        );
+        
+        if (opcion == JOptionPane.YES_OPTION) {
+            
+            emprendedor.getProductos().EliminarProducto(ProductoEncontrado);
+            JOptionPane.showMessageDialog(this, "Producto Eliminado");
+            LimpiarCampos();
+            cargarTablaProductos();
+            
+            
+            
+        } else {
+            JOptionPane.showMessageDialog(this, "Confirmamos que quieres dejar este producto en tu inventario");
+        }
+        
+    }//GEN-LAST:event_BtnEliminarActionPerformed
 
     private void jcCategoriaActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_jcCategoriaActionPerformed
         // TODO add your handling code here:
 
     }//GEN-LAST:event_jcCategoriaActionPerformed
 
+    private void BuscarPrecioActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BuscarPrecioActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_BuscarPrecioActionPerformed
+
+    private void BtnGuardarCambiosActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnGuardarCambiosActionPerformed
+        // TODO add your handling code here:
+        int CodigoP = Integer.parseInt(CodigoProducto.getText());
+        Producto ProductoEncontrado = emprendedor.getProductos().BuscarProducto(CodigoP);
+        
+        String nombreProN = BuscarNombre.getText();
+        int StockProN = Integer.parseInt(BuscarStock.getText());
+        double NuevoPrecio = Double.parseDouble(BuscarPrecio.getText());
+        String NuevoEstado = (String)BuscarEstado.getSelectedItem();
+        
+        ProductoEncontrado.setNombre(nombreProN);
+        ProductoEncontrado.setStock(StockProN);
+        ProductoEncontrado.setPrecio(NuevoPrecio);
+        ProductoEncontrado.setEstado(NuevoEstado);
+        
+        cargarTablaProductos();
+        JOptionPane.showMessageDialog(null, "Se han actualizado los datos del producto");
+
+        LimpiarCampos();
+    }//GEN-LAST:event_BtnGuardarCambiosActionPerformed
+
+    private void BtnEditar1ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_BtnEditar1ActionPerformed
+        // TODO add your handling code here:
+        HabilitarCampos();
+        LimpiarCampos();
+        CodigoProducto.setEnabled(false);
+        
+        
+        
+    }//GEN-LAST:event_BtnEditar1ActionPerformed
+
     public void LimpiarCampos(){
         JtaDescripcionProducto.setText("");
         jtfNombreProducto.setText("");
         jtfPrecioProducto.setText("");
         jtfStock.setText("");
+        BuscarNombre.setText("");
+        BuscarStock.setText("");
+        BuscarPrecio.setText("");
         
     }
-
-
     // Variables declaration - do not modify//GEN-BEGIN:variables
+    private RoundersComponents.ButtonRound BtnBuscar;
+    private RoundersComponents.ButtonRound BtnEditar1;
+    private RoundersComponents.ButtonRound BtnEliminar;
+    private RoundersComponents.ButtonRound BtnGuardarCambios;
+    private javax.swing.JComboBox<String> BuscarEstado;
+    private javax.swing.JTextField BuscarNombre;
+    private javax.swing.JTextField BuscarPrecio;
+    private javax.swing.JTextField BuscarStock;
+    private javax.swing.JTextField CodigoProducto;
     private javax.swing.JTextArea JtaDescripcionProducto;
     private RoundersComponents.ButtonRound btnRegitarProducto;
-    private RoundersComponents.ButtonRound buttonRound2;
-    private RoundersComponents.ButtonRound buttonRound3;
-    private RoundersComponents.ButtonRound buttonRound4;
-    private javax.swing.JComboBox<String> jComboBox1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel10;
     private javax.swing.JLabel jLabel11;
@@ -632,10 +762,6 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
     private javax.swing.JSeparator jSeparator2;
     private javax.swing.JSeparator jSeparator3;
     private javax.swing.JTable jTable1;
-    private javax.swing.JTextField jTextField1;
-    private javax.swing.JTextField jTextField6;
-    private javax.swing.JTextField jTextField7;
-    private javax.swing.JTextField jTextField8;
     private javax.swing.JComboBox<String> jcCategoria;
     private javax.swing.JComboBox<String> jcEstadoProducto;
     private javax.swing.JTextField jtfNombreProducto;
