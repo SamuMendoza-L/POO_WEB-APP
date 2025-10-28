@@ -162,10 +162,6 @@ public class ProductosEmprendedor extends javax.swing.JPanel {
         BuscarEstado.setEnabled(true);
     }
     
-    
-
-    
-    
 
     /**
      * This method is called from within the constructor to initialize the form.
